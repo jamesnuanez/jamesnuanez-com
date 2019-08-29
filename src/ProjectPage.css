@@ -1,0 +1,41 @@
+.ProjectPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  overflow: auto;
+  z-index: 100;
+}
+
+.ProjectPage-modal {
+  position: relative;
+  background: #fff;
+  max-width: 50rem;
+  padding: 2rem 4rem;
+  margin: 4rem auto;
+  z-index: 1;
+}
+
+.ProjectPage-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.ProjectPage-modal h1 {
+  margin-top: 0;
+}
+
+.ProjectPage video {
+  width: 100%;
+}
+
+.ProjectPage-modal .Stack-technologies {
+  flex-wrap: nowrap;
+}
+
+.ProjectPage-modal .button {
+  margin-right: 1rem;
+}

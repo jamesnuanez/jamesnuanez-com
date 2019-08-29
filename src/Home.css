@@ -1,0 +1,139 @@
+.Home {
+  text-align: center;
+}
+
+.Home-h1-container {
+  overflow: hidden;
+}
+
+.Home-h1-container h1 {
+  color: #E7BB59;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  filter: drop-shadow(0 2px #7D371A);
+  text-align: center;
+  display: inline-block;
+}
+
+.Home-h1-container h1:before,
+.Home-h1-container h1:after {
+  content: '';
+  position: absolute;
+  background: #E7BB59;
+  width: 100%;
+  height: 10%;
+  top: 45%;
+}
+
+.Home-h1-container h1:before {
+  right: 101%;
+}
+
+.Home-h1-container h1:after {
+  left: 101%;
+}
+
+.Home-h1-container h1:nth-of-type(2) {
+  color: #CF7A36;
+}
+
+/*---------------------------------------------------------------------------*/
+/* BIO */
+/*---------------------------------------------------------------------------*/
+
+.Home-bio {
+  margin: 6rem 0 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.Home-bio h1 {
+  font-size: 4.2rem;
+  margin: 0;
+  color: #E9BB67;
+  text-shadow: 0 0.05rem 0.05rem #64493c;
+}
+
+/*.Home-bio h1:hover {
+  text-shadow: 0 0.15rem 0.05rem #86695B;
+  transition: 0.1s linear;
+}
+*/
+.Home-bio h2 {
+  font-size: 3rem;
+  margin: 0 0 2rem;
+  color: #CF7A36;
+  text-shadow: 0 0.05rem 0.05rem #64493c;
+}
+
+/*.Home-bio h2:hover {
+  text-shadow: 0 0.15rem 0.05rem #86695B;
+  transition: 0.1s linear;
+}
+*/
+.Home-bio p {
+  font-size: 1.5rem;
+  max-width: 30rem;
+  margin: 0 5rem 2rem 0;
+}
+
+.Home-bio img {
+  border-radius: 50%;
+  margin-top: 1.5rem;
+}
+
+/*---------------------------------------------------------------------------*/
+/* CURRENT STACK */
+/*---------------------------------------------------------------------------*/
+
+.Home-splash {
+  margin: 6rem 0 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Home-splash-video {
+  width: 63%;
+}
+
+.Home-splash-video img {
+  width: 100%;
+  display: block;
+}
+
+.Home-splash h2 {
+  margin-top: 0;
+}
+
+.Home-splash-stack {
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Home-splash-stack .Stack-technologies {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Home-splash-stack .Stack-technologies .Stack-img-container {
+  margin: 0 0 1.5rem;
+  width: 8.4rem;
+  height: 6.5rem;
+}
+
+/*---------------------------------------------------------------------------*/
+/* WORK */
+/*---------------------------------------------------------------------------*/
+
+.Home-work section.Stack {
+  margin-bottom: 3rem;
+}
+
+.Home-work {
+  margin-bottom: 10rem;
+}

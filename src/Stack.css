@@ -1,0 +1,34 @@
+.Stack-technologies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -1%;
+}
+
+.Stack-img-container {
+  width: 20%;
+  height: 6rem;
+  padding: 1rem;
+  margin: 1%;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 0.05rem 0.25rem #aaa;
+}
+
+.Stack-img-container-small {
+  width: 31%;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.Stack-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Stack-drop-shadow {
+  filter: drop-shadow(0 0 0.2rem #777);
+}

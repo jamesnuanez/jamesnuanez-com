@@ -1,0 +1,20 @@
+.About {
+}
+
+.About img {
+  display: block;
+  max-width: 100%;
+  border-radius: 0.15rem;
+  box-shadow: 0 0.05rem 0.3rem #aaa;
+}
+
+.About p {
+  margin-bottom: 1.75rem;
+}
+
+.About p span {
+  background: #F0E7CB;
+  border-radius: 0.15rem;
+  padding: 0 0.15rem;
+  border: 1px solid #E0C78D;
+}

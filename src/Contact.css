@@ -1,0 +1,104 @@
+.Contact label,
+.Contact input,
+.Contact textarea {
+  display: block;
+}
+
+.Contact input,
+.Contact button,
+.Contact textarea {
+  width: 100%;
+  outline: none;
+}
+
+.Contact input,
+.Contact textarea {
+  border: 2px solid #9C8B7A;
+}
+
+.Contact input:focus,
+.Contact textarea:focus {
+  border-color: #CF7A36;
+}
+
+.Contact input,
+.Contact textarea {
+  padding: 0.5rem;
+}
+
+.Contact textarea {
+  height: 10rem;
+}
+
+.Contact label {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.2rem;
+  color: #7C6F62;
+}
+
+.Contact button {
+  margin-top: 1rem;
+}
+
+.Contact label:first-of-type {
+  margin-top: 0;
+}
+
+.Contact-checkbox-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center; 
+}
+
+
+/*--------------------------------------------------------------------*/
+/* Checkbox */
+/*--------------------------------------------------------------------*/
+
+/* default checkbox will be hidden behind the custom checkbox */
+.Contact input[type=checkbox] {
+  display: inline-block;
+  width: 1.25rem;
+}
+
+/* checkbox label */
+.Contact input[type=checkbox] + label {
+  position: relative;
+  display: inline-block;
+  height: 1.75rem;
+  margin: 0;
+  padding: 0 0.25rem;
+  border: 2px solid transparent;
+}
+
+/* custom checkbox: the box */
+.Contact input[type=checkbox] + label:before {
+  content: '';
+  border: 2px solid #9C8B7A;
+  height: 1.75rem;
+  width: 1.75rem;
+  position: absolute;
+  top: -2px;
+  left: -1.75rem;
+  box-sizing: border-box;
+  background: white;
+}
+
+/* custom checkbox: the check */
+.Contact input[type=checkbox]:checked + label:after {
+  content: '';
+  border-bottom: 0.4rem solid #CF7A36;
+  border-left: 0.4rem solid #CF7A36;
+  height: 0.75rem;
+  width: 1.2rem;
+  position: absolute;
+  top: 0.25rem;
+  left: -1.5rem;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+}
+
+/* change outline color when selected */
+.Contact input[type=checkbox]:focus + label:before {
+  border: 2px solid #CF7A36;
+}
