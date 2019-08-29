@@ -7,8 +7,6 @@ import About from './About';
 import Resume from './Resume';
 import Contact from './Contact';
 import ErrorPage from './ErrorPage';
-// import ProjectPage from './ProjectPage';
-// import data from './data.json';
 import './App.css';
 
 const navLinks = [
@@ -43,23 +41,6 @@ class App extends Component {
             <Route exact path='/about'   component={About}   />
             <Route exact path='/resume'  component={Resume}  />
             <Route exact path='/contact' component={Contact} />
-            {/*
-            <Route
-              exact
-              path='/work/:project'
-              render={(routeProps) => {
-                const dataToPass = data.filter(p => {
-                  return (p.url === routeProps.match.params.project);
-                });
-                console.log(dataToPass);
-                return (
-                  <Projects>
-                    <ProjectPage {...dataToPass[0]} />
-                  </Projects>
-                );
-              }}
-            />
-            */}
             <Route component={ErrorPage} />
           </Switch>
         </main>
