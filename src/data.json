@@ -1,0 +1,176 @@
+[
+  {
+    "key": 1,
+    "title": "Cash Tracker",
+    "url": "cash-tracker",
+    "stack": [
+      "Node",
+      "Express",
+      "MySQL",
+      "EJS"
+    ],
+    "stack-primary": [
+      "Node",
+      "Express",
+      "MySQL"
+    ],
+    "description-short": "Financial tracking software for families who carry cash.",
+    "description-long": "Financial tracking software for families who carry cash. Multi-user accounts, add and edit transactions, reconcile individual and total balances, filter transactions by individual.",
+    "features": [
+      "User authentication",
+      "Multi-user accounts",
+      "Add and edit transactions",
+      "Reconcile individual and total balances",
+      "Filter by user"
+    ],
+    "video": null,
+    "link-website": "http://jamesnuanez.com/cash"
+  },
+  {
+    "key": 2,
+    "title": "Node-Mongo Starter App",
+    "url": "starter-app",
+    "stack": [
+      "Node",
+      "Express",
+      "MongoDB",
+      "EJS",
+      "Passport",
+      "Connect Flash",
+      "Cookie Parser",
+      "GitHub"
+    ],
+    "stack-primary": [
+      "Node",
+      "Express",
+      "MongoDB"
+    ],
+    "description-short": "A starter app with account creation, user authentication, verification emails, password reset, email change, and user invitations.",
+    "features": [
+      "Account creation",
+      "User authentication",
+      "Verification emails",
+      "Password reset",
+      "Email change",
+      "Invitate users"
+    ],
+    "video": null,
+    "link-github": "https://github.com/jamesnuanez/express-mongoose-passport-starter-app",
+    "link-website": "https://www.jamesnuanez.com/starter-app"
+  },
+  {
+    "key": 3,
+    "title": "Call records search tool for Phone.com",
+    "title-short": "Call records search tool",
+    "url": "call-records",
+    "stack": [
+      "Node",
+      "Express",
+      "MySQL",
+      "EJS",
+      "AWS"
+    ],
+    "stack-primary": [
+      "Node",
+      "MySQL",
+      "AWS"
+    ],
+    "description-short": "An app to collect call details and access and search them.",
+    "description-long": "This project encompasses an entire AWS application infrustructure, including a dedicated VPC with public and private subnets, an internet gateway, NAT gateway, and an S3 endpoint. Data is stored in a MySQL RDS database, and call recordings are stored in S3. Serverless Lambda Functions are used to process recordings, triggered by automated S3 uploads (via SFTP using AWS Transfer), while other Lambda Functions scheduled via CloudWatch Events perform API data collection and reconciliation. Primary appliation code runs on an EC2 instance, and SNS alerts are used for error handling.",
+    "video": null
+  },
+  {
+    "key": 4,
+    "title": "VoIP Statistics tool for Phone.com",
+    "title-short": "VoIP Statistics tool",
+    "url": "voip-statistics",
+    "stack": [
+      "Node",
+      "Express",
+      "MySQL",
+      "EJS",
+      "Bash",
+      "D3",
+      "PagerDuty API",
+      "Jira API"
+    ],
+    "stack-primary": [
+      "Node",
+      "Bash",
+      "D3"
+    ],
+    "description-short": "An app to collect and display VoIP statistics.",
+    "description-long": "Collect call statistics and alerts via the PagerDuty API and the Jira API. Collect images from other web services using scheduled Bash scripts. Data stored in a local MySQL database and displayed for a given time range. Pie and bar chart visualizations using D3, dialtime uptime calculated on-the-fly for any time range.",
+    "video": null
+  },
+  {
+    "key": 5,
+    "title": "J. M. M. Nuanez, Author of Birdie and Me",
+    "title-short": "J. M. M. Nuanez",
+    "url": "jmm-nuanez",
+    "stack": [
+      "Node",
+      "Express",
+      "MySQL",
+      "EJS",
+      "Nodemailer",
+      "Request",
+      "MailChimp API"
+    ],
+    "stack-primary": [
+      "Node",
+      "MySQL",
+      "Nodemailer"
+    ],
+    "description-short": "Author website with newsletter and contact form",
+    "description-long": "Author website with newsletter sign-up and a contact form that saves data to a local database and connects to the MailChimp API.",
+    "features": [
+      "Newsletter form that saves to a local database and connects to the MailChimp API.",
+      "Contact form that saves to a local database and emails the site administrator and the sender.",
+      "A pre-order modal using the JavaScript history API."
+    ],
+    "video": null,
+    "link-website": "http://www.jmmnuanez.com"
+  },
+  {
+    "key": 6,
+    "title": "Sweet Via Patisserie",
+    "url": "sweet-via",
+    "stack": [
+      "Node",
+      "Express",
+      "EJS",
+      "Nodemailer",
+      "Request",
+      "Instagram API"
+    ],
+    "description-short": "Website for a local bakery",
+    "description-long": "Website for a local bakery, with information about the business, news about upcoming events and contact forms for customers to ask questions or place orders.",
+    "features": [
+      "Contact forms",
+      "Instagram API integration"
+    ],
+    "video": null,
+    "link-website": "http://www.sweetviapatisserie.com"
+  },
+  {
+    "key": 7,
+    "title": "VoIP Software Development for Phone.com",
+    "title-short": "VoIP Software Development",
+    "url": "voip-software",
+    "stack": [
+      "FreeSWITCH",
+      "Lua",
+      "MySQL",
+      "GitLab"
+    ],
+    "stack-primary": [
+      "FreeSWITCH",
+      "Lua",
+      "MySQL"
+    ],
+    "description-short": "Build a VoIP stack on top of FreeSWITCH with Lua.",
+    "description-long": "With a team, build a new VoIP call routing service on FreeSWITCH. Implement features and bug fixes in Lua, and connect to a MySQL database. Code managed in GitLab.",
+    "video": null
+  }
+]
