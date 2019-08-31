@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import FinalLink from './FinalLink';
 import './About.css';
 
 class About extends Component {
@@ -49,9 +49,8 @@ class About extends Component {
           nisl condimentum tristique. Vestibulum eget egestas tortor. Suspendisse eu mauris 
           accumsan, viverra nulla et.
         </p>
-        <Link className="button" to="/work">
-          View my work
-        </Link>
+        <FinalLink url="/resume" text="Check out my resume" />
+
       </section>
     );
   }

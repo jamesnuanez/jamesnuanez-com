@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FinalLink from './FinalLink';
 import './Resume.css';
 
 class Resume extends Component {
@@ -119,6 +120,7 @@ class Resume extends Component {
 
           </div>
         </main>
+        <FinalLink url="/contact" text="Get in touch" />
       </section>
     );
   }

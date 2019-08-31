@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import FinalLink from './FinalLink';
 import Stack from './Stack';
 import './Home.css';
 
@@ -74,7 +74,7 @@ class Home extends Component {
               'Lua',
             ]}
           />
-          <Link className="button" to="/work">View my work</Link>
+          <FinalLink />
         </div>
       </section>
     );

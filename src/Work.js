@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 import ProjectPage from './ProjectPage';
+import FinalLink from './FinalLink';
 import data from './data.json';
 import './Work.css';
 
@@ -24,6 +25,7 @@ class Work extends Component {
             />
           ))}
         </div>
+        <FinalLink url="/about" text="Learn more about me" />
 
           <Route
             exact
