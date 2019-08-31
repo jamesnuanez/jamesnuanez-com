@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './ErrorPage.css';
 
 class ErrorPage extends Component {
+  componentDidMount() {
+    document.title =`Error | ${process.env.REACT_APP_SITE_TITLE}`;
+  }
   render() {
     return (
       <section className="ErrorPage">
