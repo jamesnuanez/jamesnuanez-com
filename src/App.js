@@ -10,10 +10,12 @@ import ErrorPage from './ErrorPage';
 import './App.css';
 
 const navLinks = [
-  { url: '/work', name: 'Work' },
-  { url: '/about', name: 'About' },
-  { url: '/resume', name: 'Resume' },
-  { url: '/contact', name: 'Contact' },
+  { type: 'text', url: '/work', name: 'Work' },
+  { type: 'text', url: '/about', name: 'About' },
+  { type: 'text', url: '/resume', name: 'Resume' },
+  { type: 'text', url: '/contact', name: 'Contact' },
+  { type: 'img', url: 'https://github.com/jamesnuanez', filename: 'github.svg', alt: 'GitHub' },
+  { type: 'img', url: 'https://www.linkedin.com/in/jamesnuanez', filename: 'linkedin.png', alt: 'LinkedIn' },
 ];
 
 class App extends Component {

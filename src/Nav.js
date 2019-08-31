@@ -11,12 +11,25 @@ class Nav extends Component {
           <Link to="/">Home</Link>
           <ul>
             {this.props.navLinks.map(link => (
-              <li key={link.url}>
-                <NavLink
-                  activeClassName='Nav-active'
-                  to={link.url}>{link.name}
-                </NavLink>
-              </li>
+              link.type === 'text' ? (
+                <li key={link.url}>
+                  <NavLink
+                    activeClassName='Nav-active'
+                    to={link.url}
+                  >
+                    {link.name}
+                  </NavLink>
+                </li>
+              ) : (
+                <li key={link.url}>
+                  <a href={link.url}>
+                    <img
+                      src={`/images/icons/${link.filename}`}
+                      alt={link.alt}
+                    />
+                  </a>
+                </li>
+              )
             ))}
           </ul>
         </div>
