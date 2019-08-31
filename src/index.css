@@ -17,21 +17,28 @@ body, input, textarea {
   font-family: "Helvetica";
 }
 
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
 h1 {
   font-size: 4.2rem;
   line-height: 125%;
-  font-weight: normal;
   margin-bottom: 1rem;
-  text-shadow: 0 0.05rem 0.05rem #64493c;
-  color: #E9BB67;
+  color: #CF7A36;
 }
 
 h2 {
   font-size: 2.5rem;
-  font-weight: normal;
-  color: #CF7A36;
-  text-shadow: 0 0.05rem 0.05rem #64493c;
 }
+
+h3 {
+  font-size: 2rem;
+  color: #9c561d;
+}
+
 
 p, li, a, input, textarea, button {
   font-size: 1.1rem;
@@ -43,10 +50,6 @@ a {
   color: #622820;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -56,6 +59,15 @@ hr {
   margin: 1.5rem 0 0;
   border: none;
   border-top: 1px solid #aaa;
+}
+
+img,
+video {
+  display: block;
+}
+
+video {
+  width: 100%;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -101,9 +113,11 @@ button,
   width: 100%;
   top: 43%;
   height: 47%;
+  border: 2px solid #E9BB67;
   background: #E9BB67;
   z-index: -1;
   transition: 0.1s all;
+  box-sizing: border-box;
 }
 
 .button:after {
@@ -126,11 +140,12 @@ button,
 .button:hover:before {
   top: 10%;
   height: 80%;
+  border-color: #EFD391;
   background: #EFD391;
   z-index: -1;
 }
 .button:focus:before {
-  border: 2px solid #CF7A36;
+  border-color: #CF7A36;
 }
 
 .button:focus:after,
