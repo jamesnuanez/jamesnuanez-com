@@ -1,22 +1,61 @@
 .ProjectCard {
+  position: relative;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  width: 32%;
-  padding: 1rem;
-  margin-bottom: 2%;
-  border: 1px solid #ccc;
+  margin-bottom: 10rem;
+  box-shadow: 0 0.1rem 0.5rem #aaa;
+  border-radius: 0.5rem;
+  overflow: hidden;
   cursor: pointer;
-  text-align: center;
-  box-shadow: 0 0.2rem 0.4rem #fff;
-  transition: 0.2s all;
 }
 
 .ProjectCard:hover {
-  background-color: #F5D995;
-  box-shadow: 0 0.2rem 0.4rem #ccc;
+  box-shadow: 0 0.1rem 0.5rem #777;
 }
 
-.ProjectCard h2 {
-  margin-top: 0;
+.ProjectCard > div {
+  width: 50%;
+}
+
+.ProjectCard-overlay-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ProjectCard-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding: 1rem 4rem;
+}
+
+.ProjectCard-text-left {
+  align-items: flex-end;
+  text-align: right;
+  order: -1;
+}
+
+.ProjectCard-text h2 {
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem;
+  cursor: auto;
+}
+
+.ProjectCard-text p {
+  font-size: 1.5rem;
+  cursor: auto;
+}
+
+.ProjectCard-text .button {
+  margin-top: 1.5rem;
+}
+
+.ProjectCard-image img {
+  width: 100%;
 }

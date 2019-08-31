@@ -24,18 +24,32 @@
   right: 1rem;
 }
 
-.ProjectPage-modal h1 {
-  margin-top: 0;
+.ProjectPage-modal h2:first-of-type {
+  margin-bottom: 0;
+}
+
+.ProjectPage-modal h2 {
+  margin: 2rem 0;
+}
+
+.ProjectPage-modal h3 {
+  margin: 0.2rem 0;
+  font-size: 2rem;
+  color:#9c561d
 }
 
 .ProjectPage video {
+  margin: 2rem 0;
   width: 100%;
 }
 
-.ProjectPage-modal .Stack-technologies {
+.ProjectPage-modal .Stack {
+  justify-content: center;
   flex-wrap: nowrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .ProjectPage-modal .button {
-  margin-right: 1rem;
+  margin: 1rem 1rem 0 0;
 }

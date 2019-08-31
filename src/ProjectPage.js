@@ -24,11 +24,13 @@ class ProjectPage extends Component {
 
   componentDidMount() {
     document.title = `${this.props.title} | ${process.env.REACT_APP_SITE_TITLE}`;
+    document.body.style.overflow = "hidden";
     window.addEventListener('keyup', this.closeOnEscape);
   }
 
   componentWillUnmount() {
     document.title = `Work | ${process.env.REACT_APP_SITE_TITLE}`;
+    document.body.style.overflow = "auto";
     window.removeEventListener('keyup', this.closeOnEscape);
   }
 
@@ -44,14 +46,18 @@ class ProjectPage extends Component {
           {/* TITLE */}
           {/*--------------------------------------*/}
           <h2>{this.props.title}</h2>
+          <h3>{this.props.tagline}</h3>
 
           {/*--------------------------------------*/}
           {/* VIDEO */}
           {/*--------------------------------------*/}
-          <video controls
-            poster={this.props.image || '/images/temp-video.jpg'}
-            src={this.props.video}
-          />
+          {
+            this.props.video !== 'none' &&
+            <video controls
+              poster={this.props.image || '/images/temp-video.jpg'}
+              src={this.props.video}
+            />
+          }
 
           {/*--------------------------------------*/}
           {/* STACK */}

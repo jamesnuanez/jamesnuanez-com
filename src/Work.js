@@ -17,10 +17,11 @@ class Work extends Component {
       <section className="Work">
         <h1>Work</h1>
         <div className="Project-container">
-          {data.map(project => (
+          {data.map((project, i) => (
             <ProjectCard
               history={this.props.history}
               key={project.key}
+              imageLocation={i % 2 === 0 ? 'left' : 'right'}
               {...project}
             />
           ))}
