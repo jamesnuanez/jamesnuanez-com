@@ -32,6 +32,7 @@ class Contact extends Component {
       );
       this.setState({ responseMessage: response.data });
     } catch(err) {
+      this.setState({ responseMessage: "Something went wrong. Please try again." });
       console.error(err);
     }
   }
