@@ -13,39 +13,30 @@ class Home extends Component {
       <section className="Home">
       
         <div className="Home-bio">
-          <div>
-            <h1>James Nuanez</h1>
-            <h2>Full Stack Developer</h2>
-            <p>
-              Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam,
-            </p>
-            <Link className="button" to="/about">
-              Learn more about me
-            </Link>
-          </div>
-          <div>
-            <img src="/images/kb-trackball-square.jpg" alt="James Nuanez" />
-          </div>
+          <h1>James Nuanez</h1>
+          <h2>Full Stack Developer</h2>
+          <p>
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam,
+          </p>
         </div>
 
         <div className="Home-splash">
           <div className="Home-splash-video">
-            <img
-              src="/images/jamesnuanez-video.jpg"
-              alt="Video of how jamesnuanez.com is built"
-            />
+            <h2>Building this website</h2>
+            <video controls
+              poster="/images/temp-video.jpg">
+            </video>
           </div>
           <div className="Home-splash-stack">
             <Stack
-              title="My current stack"
-              technologies={['React', 'Node', 'Express', 'MySQL']}
+              technologies={['React', 'Node', 'Express', 'MySQL', 'GitHub']}
             />
             <div>
-              <a className="button" href="https://github.com/jamesnuanez/jamesnuanez">
+              <a className="button" href="https://github.com/jamesnuanez/jamesnuanez-com-frontend">
                 View code on GitHub
               </a>
             </div>
@@ -53,20 +44,16 @@ class Home extends Component {
         </div>
 
         <div className="Home-work">
+          <h2>Some other stuff I've worked with</h2>
           <Stack
-            title="Some stuff I've worked with"
             technologies={[
-              'Node',
-              'Express',
-              'React',
-              'MySQL',
+              'Bash',
+              'Git',
+              'GitLab',
+              'D3',
               'MongoDB',
               'Nodemailer',
               'Passport',
-              'D3',
-              'Bash',
-              'GitHub',
-              'GitLab',
               'NGINX',
               'AWS',
               'DigitalOcean',
