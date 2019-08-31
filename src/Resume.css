@@ -1,10 +1,10 @@
-.Resume {
+.Resume-page {
   box-shadow: 0 0 0.3rem rgba(0,0,0,0.3);
   padding: 3rem 5rem 6rem;
   margin-bottom: 5rem;
 }
 
-.Resume-main {
+.Resume-content {
   display: flex;
 }
 
@@ -30,6 +30,9 @@
 .Resume h3 {
   font-size: 1.1rem;
   margin: 1.75rem 0 0.5rem;
+  color: #5e544b;
+  font-weight: bold;
+  text-shadow: none;
 }
 
 .Resume h3:first-of-type {
@@ -56,6 +59,10 @@
   padding: 0;
 }
 
+.Resume ol {
+  padding-left: 1.2rem;
+}
+
 .Resume ul li {
   margin: 0.5rem 0;
   line-height: 120%;
@@ -73,7 +80,7 @@
     padding: 0;
   }
 
-  .Resume-main {
+  .Resume-content {
     flex-wrap: wrap;
   }
 
