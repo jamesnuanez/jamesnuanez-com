@@ -6,6 +6,7 @@ import './Home.css';
 class Home extends Component {
   componentDidMount() {
     document.title = process.env.REACT_APP_SITE_TITLE;
+    window.scrollTo(0,0);
   }
   render() {
     return (

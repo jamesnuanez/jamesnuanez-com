@@ -6,6 +6,7 @@ class About extends Component {
   
   componentDidMount() {
     document.title = `About | ${process.env.REACT_APP_SITE_TITLE}`;
+    window.scrollTo(0,0);
   }
 
   render() {

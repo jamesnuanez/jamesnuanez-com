@@ -20,6 +20,7 @@ class Contact extends Component {
 
   componentDidMount() {
     document.title = `Contact | ${process.env.REACT_APP_SITE_TITLE}`;
+    window.scrollTo(0,0);
   }
 
   async handleSubmit(evt) {

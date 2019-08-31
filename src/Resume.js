@@ -4,6 +4,7 @@ import './Resume.css';
 class Resume extends Component {
   componentDidMount() {
     document.title = `Resume | ${process.env.REACT_APP_SITE_TITLE}`;
+    window.scrollTo(0,0);
   }
   render() {
     return (

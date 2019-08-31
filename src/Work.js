@@ -8,6 +8,7 @@ import './Work.css';
 class Work extends Component {
   componentDidMount() {
     document.title = `Work | ${process.env.REACT_APP_SITE_TITLE}`;
+    window.scrollTo(0,0);
   }
   render() {
     const routeMatch = {...this.props.match};
