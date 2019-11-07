@@ -1,21 +1,18 @@
 .ProjectCard {
   position: relative;
-  width: 100%;
+  width: 49%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   box-shadow: 0 0.1rem 0.5rem #aaa;
   border-radius: 0.5rem;
   overflow: hidden;
   cursor: pointer;
+  flex-direction: column;
 }
 
 .ProjectCard:hover {
   box-shadow: 0 0.1rem 0.5rem #777;
-}
-
-.ProjectCard > div {
-  width: 50%;
 }
 
 .ProjectCard-overlay-link {
@@ -26,36 +23,43 @@
   left: 0;
 }
 
-.ProjectCard-text {
+.ProjectCard-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-  padding: 1rem 4rem;
 }
 
 .ProjectCard-text-left {
   align-items: flex-end;
-  text-align: right;
+  text-align: left;
   order: -1;
 }
 
 .ProjectCard-text h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin: 0 0 0.5rem;
   cursor: auto;
 }
 
-.ProjectCard-text p {
-  font-size: 1.5rem;
-  cursor: auto;
+.ProjectCard-text {
+  width: 47%;
+  padding: 1rem;
+  text-align: right;
 }
 
-.ProjectCard-text .button {
-  margin-top: 1.5rem;
+.ProjectCard-image {
+  width: 53%;
+  padding: 1rem;
 }
 
 .ProjectCard-image img {
+  box-shadow: 0 0.1rem 0.3rem #aaa;
   width: 100%;
+}
+
+.ProjectCard .Stack {
+  padding: 0 1rem;
+}
+
+.ProjectCard-link {
+  text-align: center;
+  margin-bottom: 1rem;
 }

@@ -12,29 +12,43 @@ class ProjectCard extends Component {
           to={`/work/${this.props.url}`}
           aria-hidden="true"
         ></Link>
-        <div className="ProjectCard-image">
+        <div className="ProjectCard-content">
+          <div
+            className="ProjectCard-image"
+            style={{'paddingRight':
+              this.props.url === 'voip-stats'
+                ? '0'
+                : ''
+            }}
+          >
             <img
               src={`/images/work/thumb-${this.props.url}.jpg`}
               alt={this.props.title}
+              style={{'boxShadow':
+                this.props.url === 'voip-stats'
+                  ? 'none'
+                  : ''
+              }}
             />
+          </div>
+          <div
+            className={
+              `ProjectCard-text ${
+                this.props.imageLocation === 'right'
+                ? 'ProjectCard-text-left'
+                : ''
+              }`
+            }
+          >
+            <h2>{this.props.title}</h2>
+            <p>{this.props['description-short']}</p>
+          </div>
         </div>
-        <div className={
-          `ProjectCard-text ${
-            this.props.imageLocation === 'right'
-            && 'ProjectCard-text-left'
-          }`
-        }
-        >
-          <h2>
-            {this.props.title}
-          </h2>
-          <p>
-            {this.props['description-short']}
-          </p>
-          <Stack
-            format="small"
-            technologies={this.props['stack-primary'] || this.props.stack}
-          />
+        <Stack
+          format="small"
+          technologies={this.props['stack'] || this.props.stack}
+        />
+        <div className="ProjectCard-link">
           <Link
             className="button"
             to={`/work/${this.props.url}`}
