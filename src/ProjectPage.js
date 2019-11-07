@@ -49,15 +49,13 @@ class ProjectPage extends Component {
           <h3>{this.props.tagline}</h3>
 
           {/*--------------------------------------*/}
-          {/* VIDEO */}
+          {/* IMAGE */}
           {/*--------------------------------------*/}
-          {
-            this.props.video !== 'none' &&
-            <video controls
-              poster={this.props.image || '/images/temp-video.jpg'}
-              src={this.props.video}
-            />
-          }
+          <img
+            class="ProjectPage-image"
+            src={`/images/work/full-${this.props.url}.jpg`}
+            alt={this.props.title}
+          />
 
           {/*--------------------------------------*/}
           {/* STACK */}

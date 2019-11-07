@@ -38,9 +38,14 @@
   color:#9c561d
 }
 
+.ProjectPage-image,
 .ProjectPage video {
   margin: 2rem 0;
   width: 100%;
+}
+
+.ProjectPage-image {
+  box-shadow: 0 0.1rem 0.5rem #777;
 }
 
 .ProjectPage-modal .Stack {
