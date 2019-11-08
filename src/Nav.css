@@ -5,11 +5,11 @@
   box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0);
   background: #fff;
   transition: 0.5s all;
+  z-index: 10;
 }
 
 .Nav-shadow {
   box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.2);
-  z-index: 10;
 }
 
 .Nav-container {
@@ -119,4 +119,47 @@
 .Nav a.Nav-active:hover:after {
   left: 0;
   width: 100%;
+}
+
+/*---------------------------------------------------------------------------*/
+/* MOBILE */
+/*---------------------------------------------------------------------------*/
+.Nav-mobile-menu-button {
+  display: none;
+  cursor: pointer;
+}
+
+.Nav ul.Nav-mobile-menu-closed {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .Nav {
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.2);
+  }
+
+  .Nav-mobile-menu-button {
+    display: inline-block;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .Nav ul.Nav-mobile-menu-closed {
+    display: none;
+  }
+
+  .Nav ul {
+    position: absolute;
+    top: 90%;
+    right: 1rem;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 0.4rem rgba(0,0,0,0.3);
+  }
+
+  .Nav ul a {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 2rem;
+  }
 }

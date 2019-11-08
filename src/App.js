@@ -23,20 +23,37 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      isScrolledDown: false
+      isScrolledDown: false,
+      mobileMenuOpen: false,
     };
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
   }
+
   componentDidMount() {
     window.addEventListener('scroll', () => {
       window.scrollY > 1
         ? this.setState({ isScrolledDown: true })
         : this.setState({ isScrolledDown: false })
-    })
+    });
+
+    window.addEventListener('click', () => {
+      this.setState({ mobileMenuOpen: false })
+    });
   }
+
+  toggleMobileMenu() {
+    this.setState(state => { return { mobileMenuOpen: !state.mobileMenuOpen }})
+  }
+
   render() {
     return (
       <div className="App">
-        <Nav navLinks={navLinks} isScrolledDown={this.state.isScrolledDown}/>
+        <Nav
+          navLinks={navLinks}
+          mobileMenuOpen={this.state.mobileMenuOpen}
+          isScrolledDown={this.state.isScrolledDown}
+          toggleMobileMenu={this.toggleMobileMenu}
+        />
         <main className="App-container">
           <Switch>
             <Route exact path='/'        component={Home}    />
