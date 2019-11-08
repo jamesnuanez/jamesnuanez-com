@@ -8,7 +8,7 @@ class Footer extends Component {
         <p>This website was built by James Nuanez using React in 2019</p>
         <p>
           <a
-            class="button"
+            className="button"
             href="https://github.com/jamesnuanez/jamesnuanez-com-frontend"
           >
             View code on GitHub
