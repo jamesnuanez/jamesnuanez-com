@@ -13,6 +13,13 @@ class ProjectCard extends Component {
           aria-hidden="true"
         ></Link>
         <div className="ProjectCard-content">
+          <h2 className="ProjectCard-title-mobile">
+            <Link
+              to={`/work/${this.props.url}`}
+            >
+              {this.props.title}
+            </Link>
+          </h2>
           <div
             className="ProjectCard-image"
             style={{'paddingRight':
@@ -21,15 +28,19 @@ class ProjectCard extends Component {
                 : ''
             }}
           >
-            <img
-              src={`/images/work/thumb-${this.props.url}.jpg`}
-              alt={this.props.title}
-              style={{'boxShadow':
-                this.props.url === 'voip-stats'
-                  ? 'none'
-                  : ''
-              }}
-            />
+            <Link
+              to={`/work/${this.props.url}`}
+            >
+              <img
+                src={`/images/work/thumb-${this.props.url}.jpg`}
+                alt={this.props.title}
+                style={{'boxShadow':
+                  this.props.url === 'voip-stats'
+                    ? 'none'
+                    : ''
+                }}
+              />
+            </Link>
           </div>
           <div
             className={
@@ -40,7 +51,7 @@ class ProjectCard extends Component {
               }`
             }
           >
-            <h2>{this.props.title}</h2>
+            <h2 className="ProjectCard-title-desktop">{this.props.title}</h2>
             <p>{this.props['description-short']}</p>
           </div>
         </div>

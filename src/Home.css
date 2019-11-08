@@ -52,6 +52,20 @@
   flex-wrap: wrap;
 }
 
-.Home-work {
-  margin-bottom: 10rem;
+/*---------------------------------------------------------------------------*/
+/* MOBILE */
+/*---------------------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+  .Home h2 {
+    font-size: 1.7rem;
+  }
+
+  .Home-bio {
+    margin: 2rem 0 3rem;
+  }
+
+  .Home-bio p {
+    font-size: 1.2rem;
+  }
 }

@@ -1,13 +1,13 @@
 .Stack {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 -1%;
 }
 
 .Stack-img-container {
   width: 23%;
   height: 6rem;
-  padding: 1rem;
+  padding: 2%;
   margin: 1%;
   border-radius: 0.5rem;
   display: flex;
@@ -30,4 +30,13 @@
 
 .Stack-drop-shadow {
   filter: drop-shadow(0 0 0.2rem #777);
+}
+
+/*---------------------------------------------------------------------------*/
+/* MOBILE */
+/*---------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+  .Stack-img-container {
+    height: 4rem;
+  }
 }

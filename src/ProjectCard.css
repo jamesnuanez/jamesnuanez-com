@@ -36,7 +36,10 @@
 .ProjectCard-text h2 {
   font-size: 1.8rem;
   margin: 0 0 0.5rem;
-  cursor: auto;
+}
+
+.ProjectCard-title-mobile {
+  display: none;
 }
 
 .ProjectCard-text {
@@ -62,4 +65,76 @@
 .ProjectCard-link {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .ProjectCard {
+    width: 100%;
+    box-shadow: none;
+    border-top: 1px solid #aaa;
+    border-radius: 0;
+    padding-bottom: 2rem;
+    margin-bottom: 0rem;
+    padding-top: 1rem;
+  }
+
+  .ProjectCard:first-of-type {
+    margin-top: 0.5rem;
+    padding-top: 0;
+  }
+
+  .ProjectCard:last-of-type {
+    border-bottom: 1px solid #aaa;
+  }
+
+  .ProjectCard:hover {
+    box-shadow: none;
+  }
+
+  .ProjectCard-overlay-link {
+    display: none;
+  }
+
+  .ProjectCard-content {
+    display: block;
+  }
+
+  .ProjectCard-title-mobile {
+    display: block;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .ProjectCard-title-mobile a {
+    font-size: 1.5rem;
+  }
+
+  .ProjectCard-title-desktop {
+    display: none;
+  }
+
+  .ProjectCard-text {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .ProjectCard-text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .ProjectCard-text p {
+    margin: 0;
+  }
+
+  .ProjectCard-image {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .ProjectCard .Stack {
+    padding: 0;
+  }
 }

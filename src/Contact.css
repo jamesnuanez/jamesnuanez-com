@@ -106,3 +106,13 @@
 .Contact input[type=checkbox]:focus + label:before {
   border: 2px solid #CF7A36;
 }
+
+/*---------------------------------------------------------------------------*/
+/* Mobile */
+/*---------------------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+  .Contact form {
+    margin-bottom: 4rem;
+  }
+}

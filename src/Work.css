@@ -4,3 +4,9 @@
   justify-content: space-between;
   margin-bottom: 3rem;
 }
+
+@media (max-width: 600px) {
+  .Work h1 {
+    text-align: center;
+  }
+}

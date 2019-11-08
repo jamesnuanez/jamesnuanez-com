@@ -12,7 +12,8 @@
 .ProjectPage-modal {
   position: relative;
   background: #fff;
-  max-width: 50rem;
+  width: 50rem;
+  max-width: 95%;
   padding: 2rem 4rem;
   margin: 4rem auto;
   z-index: 1;
@@ -57,4 +58,35 @@
 
 .ProjectPage-modal .button {
   margin: 1rem 1rem 0 0;
+}
+
+/*---------------------------------------------------------------------------*/
+/* MOBILE */
+/*---------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+  .ProjectPage-modal {
+    margin: 2rem auto;
+    padding: 1rem 1rem;
+  }
+
+  .ProjectPage-modal h2 {
+    font-size: 2rem;
+  }
+
+  .ProjectPage-modal h2:first-of-type {
+    margin-top: 1rem;
+  }
+
+  .ProjectPage-modal h3 {
+    font-size: 1.5rem;
+  }
+
+  .ProjectPage-image {
+    margin: 1rem 0;
+  }
+
+  .ProjectPage-modal .Stack {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }

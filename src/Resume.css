@@ -1,7 +1,12 @@
 .Resume-page {
   box-shadow: 0 0 0.3rem rgba(0,0,0,0.3);
   padding: 3rem 5rem 6rem;
-  margin-bottom: 5rem;
+  margin: 1.5rem 0 5rem;
+}
+
+.Resume .Resume-links {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .Resume-content {
@@ -73,11 +78,15 @@
 }
 
 
-@media (max-width: 40rem) {
-  .Resume {
-    border: none;
-    margin: 0;
+/*---------------------------------------------------------------------------*/
+/* MOBILE */
+/*---------------------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+  .Resume-page {
+    margin-bottom: 3rem;
     padding: 0;
+    box-shadow: none;
   }
 
   .Resume-content {
@@ -86,9 +95,20 @@
 
   .Resume-left {
     width: 100%;
+    order: 2;
+    margin-top: -0.5rem;
   }
 
   .Resume-divider {
     display: none;
+  }
+
+  .Resume h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .Resume h2:first-of-type {
+    margin-top: 1.5rem;
   }
 }

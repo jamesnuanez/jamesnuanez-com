@@ -12,7 +12,7 @@ class Resume extends Component {
       <section className="Resume">
         <div className="Resume-page">
           <h1>James Nuanez</h1>
-          <p>
+          <p className="Resume-links">
             <a
               className="text-link"
               href="mailto:james@jamesnuanez.com"

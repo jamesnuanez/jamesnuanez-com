@@ -64,7 +64,7 @@ class Contact extends Component {
 
           <label htmlFor="email">Email</label>
           <input
-            type="text"
+            type="email"
             id="email"
             name="email"
             value={this.state.email}
