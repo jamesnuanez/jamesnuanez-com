@@ -14,7 +14,7 @@
   background: #fff;
   width: 50rem;
   max-width: 95%;
-  padding: 2rem 4rem;
+  padding: 2rem 4rem 4rem;
   margin: 4rem auto;
   z-index: 1;
 }
@@ -30,7 +30,7 @@
 }
 
 .ProjectPage-modal h2 {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
 }
 
 .ProjectPage-modal h3 {
@@ -66,7 +66,7 @@
 @media (max-width: 600px) {
   .ProjectPage-modal {
     margin: 2rem auto;
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 2rem;
   }
 
   .ProjectPage-modal h2 {
