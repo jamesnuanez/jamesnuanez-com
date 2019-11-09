@@ -52,7 +52,7 @@ class ProjectPage extends Component {
           {/* IMAGE */}
           {/*--------------------------------------*/}
           <img
-            class="ProjectPage-image"
+            className="ProjectPage-image"
             src={`/images/work/full-${this.props.url}.jpg`}
             alt={this.props.title}
           />
