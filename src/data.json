@@ -4,132 +4,113 @@
     "title": "Cash Tracker",
     "url": "cash-tracker",
     "stack": [
-      "Node",
+      "Node.js",
       "Express",
       "MySQL",
-      "EJS"
+      "EJS",
+      "Git"
     ],
-    "stack-primary": [
-      "Node",
-      "Express",
-      "MySQL"
-    ],
-    "description-short": "Financial tracking for families who carry cash",
+    "description-short": "Multi-user financial tracking software for families carrying cash",
+    "description-long": "This application allows a group of people to have a common pool of cash while also managing their own balances within that total. Create an account, add one or more other users, and each person can add and edit transactions, or transfer an amount to someone else on the account. The transaction register can show all transactions for the entire group, or just show transactions for a specific user. Users can then reconcile their own individual cash balances, or reconcile the entire group balance.",
     "features": [
+      "Add and edit transactions",
+      "Transfer an amount between users",
+      "Reconcile individual balances or total balance",
+      "Filter transactions by individual",
       "User authentication",
       "Multi-user accounts",
-      "Add and edit transactions",
-      "Reconcile individual and total balances",
-      "Filter transactions by individual"
+      "Password reset for yourself or others on account",
+      "Responsive design"
     ],
-    "video": null,
-    "link-website": "http://jamesnuanez.com/cash"
+    "link-website": "http://cash.jamesnuanez.com"
   },
   {
     "key": 2,
     "title": "Starter App",
     "url": "starter-app",
     "stack": [
-      "Node",
+      "Node.js",
       "Express",
       "MongoDB",
       "EJS",
-      "Passport",
-      "Connect Flash",
+      "Passport.js",
       "Cookie Parser",
       "GitHub"
     ],
-    "stack-primary": [
-      "Node",
-      "Express",
-      "MongoDB"
-    ],
-    "description-short": "Everything you need to jump-start a user based application",
+    "description-short": "Jump start a full stack user based application with Node and Mongo",
+    "description-long": "This fully functional starter application is built with Node.js, Express, MongoDB, Mongoose, Passport.js, and Nodemailer, and includes full-featured user management. Code is open source and available on GitHub.",
     "features": [
       "Account creation",
       "User authentication",
-      "Verification emails",
       "Password reset",
-      "Email change",
-      "Invitate users"
+      "Verification emails",
+      "Email and password change",
+      "User invitation",
+      "Account deletion"
     ],
-    "video": null,
-    "link-github": "https://github.com/jamesnuanez/express-mongoose-passport-starter-app",
-    "link-website": "https://www.jamesnuanez.com/starter-app"
+    "link-github": "https://github.com/jamesnuanez/node-mongo-starter-app",
+    "link-website": "https://starter.jamesnuanez.com"
   },
   {
     "key": 3,
-    "title": "Call Search Tool",
+    "title": "Call Search",
     "tagline": "For Phone.com",
-    "url": "call-records",
+    "url": "call-search",
     "stack": [
-      "Node",
+      "Node.js",
       "Express",
       "MySQL",
       "EJS",
       "AWS"
     ],
-    "stack-primary": [
-      "Node",
-      "MySQL",
-      "AWS"
-    ],
-    "description-short": "An automated back end that collects call data and a front end to search and filter calls",
-    "description-long": "An app to automatically collect call details and present them to internal users within the company, so that they can browse, filter, and search for calls. This project encompasses an entire AWS application infrustructure, including a dedicated VPC with public and private subnets, an internet gateway, NAT gateway, and an S3 endpoint. Serverless Lambda Functions are used to process recordings and perform API data collection and data reconciliation.",
-
-
+    "description-short": "Collects, reconciles, and presents call data in a searchable GUI",
+    "description-long": "This application allows customer support management to browse, filter, and search for customer support calls. The application automatically collects call details from an external API and reconciles the data to call recordings stored in S3. This project encompasses an entire AWS application infrastructure, including a dedicated VPC with public and private subnets, an internet gateway, NAT gateway, and an S3 endpoint. Serverless Lambda Functions are used to process recordings, perform API data collection, and reconcile data.",
     "features": [
       "A dedicated VPC (including subnets, gateways, and an S3 endpoint)",
       "MySQL RDS Database",
       "Storage in S3",
       "Lambda Functions triggered by S3 uploads",
       "Lambda Functions scheduled by CloudWatch Events",
-      "Connects to a SOAP API",
-      "Primary code running on an EC2 instance",
+      "Connects to an external SOAP API",
+      "Web application code running on an EC2 instance",
       "SNS alerts for error handling"
-    ],
-    "video": null
+    ]
   },
   {
     "key": 4,
-    "title": "VoIP Statistics Tool",
+    "title": "VoIP Stats",
     "tagline": "For Phone.com",
-    "url": "voip-statistics",
+    "url": "voip-stats",
     "stack": [
-      "Node",
+      "Node.js",
       "Express",
       "MySQL",
       "EJS",
       "Bash",
-      "D3",
+      "D3.js",
       "PagerDuty API",
       "Jira API"
     ],
-    "stack-primary": [
-      "Node",
-      "Bash",
-      "D3"
-    ],
-    "description-short": "An app that collects VoIP and system statistics from various services and presents them in a centralized, easy-to-use GUI",
+    "description-short": "Collects and presents VoIP and system stats in a centralized GUI",
+    "description-long": "This application collects VoIP and system statistics from various services using Bash scripts and by hitting APIs and saving the data to a local database. Stats are accessible by date or date range.",
     "features": [
-      "Daily stats collected automatically",
-      "Stats accessible by date range",
-      "Pie and bar chart visualizations using D3",
-      "Uptime calculated on-the-fly for any time range",
+      "Bash scripts collect images from other web services",
+      "Stats accessible by date or date range",
+      "Pie and bar chart visualizations using D3.js",
+      "Uptime calculated on-the-fly",
       "Local MySQL database",
-      "Bash scripts to collect images from other web services",
       "PagerDuty API integration",
-      "Jira API integration"
-    ],
-    "video": null
+      "Jira API integration",
+      "Hosted on an EC2 instance in AWS"
+    ]
   },
   {
     "key": 5,
     "title": "J. M. M. Nuanez",
-    "tagline": "Author of Birdie and Me",
+    "tagline": "Author Website",
     "url": "jmm-nuanez",
     "stack": [
-      "Node",
+      "Node.js",
       "Express",
       "MySQL",
       "EJS",
@@ -138,65 +119,41 @@
       "MailChimp API",
       "Git"
     ],
-    "stack-primary": [
-      "Node",
-      "MySQL",
-      "Nodemailer"
-    ],
-    "description-short": "Author website with newsletter and contact form",
-    "description-long": "Author website with newsletter sign-up and a contact form that saves data to a local database and connects to the MailChimp API.",
+    "description-short": "Author website with custom newsletter and contact forms",
+    "description-long": "Author website with custom newsletter and contact forms that save to a local database, connect to the MailChimp API, and send emails to the author and optionally to the site visitor.",
     "features": [
-      "Newsletter sign-up",
-      "Contact form",
+      "Newsletter sign-up and subscription modification",
+      "Contact form with spam filtering and optional newsletter sign-up",
+      "Visitors can optionally get a copy of their message",
+      "Messages emailed in a custom email design",
       "Local database for newsletter sign-ups and contact form messages",
-      "Newsletter subscription modification",
-      "Contact form emails site administrator and optionally emails the sender",
-      "Mailchimp API integration for newsletter sign-ups",
-      "JavaScript history API used for pre-order modal"
+      "Mailchimp API integration",
+      "JavaScript history API",
+      "Responsive design"
     ],
-    "video": null,
     "link-website": "http://www.jmmnuanez.com"
   },
   {
     "key": 6,
     "title": "Sweet Via Patisserie",
-    "tagline": "Local Bakery",
+    "tagline": "Local Business",
     "url": "sweet-via",
     "stack": [
-      "Node",
+      "Node.js",
       "Express",
       "EJS",
       "Nodemailer",
       "Request",
-      "Instagram API"
+      "Instagram API",
+      "Git"
     ],
-    "description-short": "Website for a local bakery with order and contact forms",
-    "description-long": "Website for a local bakery, with information about the business, news about upcoming events and contact forms for customers to ask questions or place orders.",
+    "description-short": "Website for a local business with custom order forms",
+    "description-long": "Responsive website for a local patisserie. Connects to the Instagram API to display recent images and includes multiple contact forms for customers to ask questions or place orders. Messages are emailed to the business owner.",
     "features": [
-      "Contact forms",
-      "Instagram API integration"
+      "Instagram API integration",
+      "Contact forms with spam filtering",
+      "Responsive design"
     ],
-    "video": null,
     "link-website": "http://www.sweetviapatisserie.com"
-  },
-  {
-    "key": 7,
-    "title": "VoIP Software Development",
-    "tagline": "For Phone.com",
-    "url": "voip-software",
-    "stack": [
-      "FreeSWITCH",
-      "Lua",
-      "MySQL",
-      "GitLab"
-    ],
-    "stack-primary": [
-      "FreeSWITCH",
-      "Lua",
-      "MySQL"
-    ],
-    "description-short": "Building a call routing service with FreeSWITCH and Lua",
-    "description-long": "With a team, build a new VoIP call routing service on FreeSWITCH. Implement features and bug fixes in Lua, and connect to a MySQL database. Code managed in GitLab.",
-    "video": "none"
   }
 ]

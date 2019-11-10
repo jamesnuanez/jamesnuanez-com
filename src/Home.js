@@ -16,28 +16,29 @@ class Home extends Component {
           <h1>James Nuanez</h1>
           <h2>Full Stack Developer</h2>
           <p>
-            Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam,
+            Building clean and modern web applications
+            focused on exceptional user experience.
           </p>
         </div>
 
         <div className="Home-work">
-          <h2>Some other stuff I've worked with</h2>
+          <h2>Tech I Use</h2>
           <Stack
             technologies={[
+              'Node.js',
+              'Express',
+              'MySQL',
+              'MongoDB',
+              'React',
+              'D3.js',
+              'Nodemailer',
               'Bash',
               'Git',
+              'GitHub',
               'GitLab',
-              'D3',
-              'MongoDB',
-              'Nodemailer',
-              'Passport',
               'NGINX',
-              'AWS',
               'DigitalOcean',
+              'AWS',
               'FreeSWITCH',
               'Lua',
             ]}
