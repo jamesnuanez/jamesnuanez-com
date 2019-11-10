@@ -1,7 +1,7 @@
 {
-  "name": "jamesnuanez-com-frontend",
+  "name": "jamesnuanez-com",
   "version": "2.0.0",
-  "description": "React frontend of portfolio website for James Nuanez, Full Stack Developer.",
+  "description": "James Nuanez, Full Stack Developer -- Portfolio website",
   "author": "James Nuanez <james@jamesnuanez.com> (http://www.jamesnuanez.com)",
   "license": "ISC",
   "private": true,
