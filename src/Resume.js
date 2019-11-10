@@ -35,100 +35,139 @@ class Resume extends Component {
           <hr />
 
           <div className="Resume-content">
-            <div className="Resume-left">
-              <h2>Skills</h2>
-              <ul>
-                <li>Node.js with Express</li>
-                <li>React</li>
-                <li>MySQL</li>
-                <li>Git / GitHub / GitLab</li>
-                <li>Linux CLI / Bash</li>
-                <li>AWS</li>
-                <li>D3</li>
-                <li>MongoDB</li>
-                <li>FreeSWITCH</li>
-                <li>UI/UX Design</li>
-              </ul>
+            <h2>Full Stack Web Development</h2>
+            <h3>Regarding application hosting</h3>
+            <p>
+              Most of the following are run on Debian Linux with NGINX, are hosted on
+              Digital Ocean, and are managed via command line, including Git Hooks for
+              easy deployment, and TLS certification management with Let’s Encrypt.
+            </p>
+            <h3>
+              <span className="avoid-wrap">Cash Tracker (personal project)</span>
+              {' '}<span className="avoid-wrap"> -- 2019</span>
+            </h3>
+            <h4>cash.jamesnuanez.com</h4>
+            <p>
+              Multi-user cash management software. Each user can add and edit transactions and transfer amounts to other users. Review transactions and reconcile balances of individuals or the entire group. Includes user authentication for multiple users on the same account.
+            </p>
+            <h4>Node.js, Express, MySQL</h4>
 
-              <h2>Education</h2>
+            <h3>
+              <span className="avoid-wrap">Author Website: J. M. M. Nuanez</span>
+              {' '}<span className="avoid-wrap">(client work)</span>
+              {' '}<span className="avoid-wrap"> -- 2019</span>
+            </h3>
+            <h4>www.jmmnuanez.com</h4>
+            <p>
+              Author website with custom newsletter and contact forms that save to a local database, connect to the MailChimp API, and send custom-designed emails to the author and optionally to the site visitor. Contact form includes spam filtering and optional newsletter sign-up. Includes Newsletter subscription modification, use of the JavaScript history API, and responsive design.
+            </p>
+            <h4>Node.js, Express, MySQL, MailChimp API</h4>
 
-              <h3>Online Courses</h3>
-              <ul>
-                <li>Wes Bos ES6</li>
-                <li>Wes Bos Node</li>
-                <li>Colt Steele React Bootcamp</li>
-                <li>Colt Steele MySQL Bootcamp</li>
-                <li>Colt Steele Web Dev Bootcamp</li>
-              </ul>
+            <h3>
+              <span className="avoid-wrap">Starter App (personal project)</span>
+              {' '}<span className="avoid-wrap"> -- 2019</span>
+            </h3>
+            <h4>starter.jamesnuanez.com</h4>
+            <p>
+              Starter application built with Node.js, Express, MongoDB, Mongoose, Passport.js, and Nodemailer. User management includes account creation, user authentication, password reset, verification emails, email and password change, user invitation, and account deletion.
 
-              <h3>BFA in Illustration</h3>
-              <ul>
-                <li>California State University,</li>
-                <li>Long Beach</li>
-                <li>GPA: 3.8, 2007</li>
-              </ul>
+            </p>
+            <h4>Node.js, Express, MongoDB, code on GitHub</h4>
 
-              <h3>CompTIA Network+</h3>
-              <ul>
-                <li>Exam N10-006</li>
-                <li>July 2017</li>
-              </ul>
+            <h3>
+              <span className="avoid-wrap">Call Search Tool</span>
+              {' '}<span className="avoid-wrap">(employed work)</span>
+              {' '}<span className="avoid-wrap"> -- 2019</span>
+            </h3>
+            <h4>For Phone.com</h4>
+            <p>
+              Internal application for customer support management to browse, filter, and search for customer support calls. Serverless Lambda functions collect call details from an external SOAP API and reconcile it to call recordings stored in S3. Encompasses an entire AWS application infrastructure, including a dedicated VPC with public and private subnets, an internet gateway, NAT gateway, S3 endpoint, MySQL RDS Database, EC2 instance, and SNS alerts for error handling.
+            </p>
+            <h4>Node.js, Express, MySQL, Amazon Web Services</h4>
 
-              <h3>CompTIA A+</h3>
-              <ul>
-                <li>Exam 220-901 & 220-902</li>
-                <li>July 2016</li>
-              </ul>
+            <h3>
+              <span className="avoid-wrap">VoIP Stats Tool</span>
+              {' '}<span className="avoid-wrap">(employed work)</span>
+              {' '}<span className="avoid-wrap"> -- 2018</span>
+            </h3>
+            <h4>For Phone.com</h4>
+            <p>
+              Automatically collects VoIP and system statistics from various services using Bash scripts and by hitting APIs and saving the data to a local database. Stats are accessible by date or date range, pie and bar chart visualizations built using D3.js, uptime calculated on-the-fly for any time range, hosted on an EC2 instance in AWS.
+            </p>
+            <h4>Node.js, Express, MySQL, Bash Scripting, D3.js, PagerDuty API, Jira API</h4>
 
-              <h3>SIP School Certified Associate</h3>
-              <ul>
-                <li>The SIP School</li>
-                <li>June 2018</li>
-              </ul>
-            </div>
-            <div className="Resume-right">
-              <h2>Experience</h2>
-              
-              <h3>
-                <span className="avoid-wrap">Freelance Full Stack Developer</span>
-                {' '}<span className="avoid-wrap">(2017-Present)</span></h3>
-              <h4>Portfolio at www.jamesnuanez.com</h4>
-              <p>Building full stack, responsive websites using Node.js and Express, with NGINX on Linux, hosted on Digital Ocean. Managed via command line, including system updates and TLS certification management with Let’s Encrypt.</p>
+            <h3>
+              <span className="avoid-wrap">Local business: Sweet Via Patisserie</span>
+              {' '}<span className="avoid-wrap">(client work)</span>
+              {' '}<span className="avoid-wrap"> -- 2017</span>
+            </h3>
+            <h4>www.sweetviapatisserie.com</h4>
+            <p>
+              Responsive website for a local patisserie. Connects to the Instagram API to display recent images and includes custom contact forms for customers to ask questions or place orders. Forms include spam filtering and messages are emailed to the business owner.
+            </p>
+            <h4>Node.js, Express, Instagram API</h4>
 
-              <h3>
-                <span className="avoid-wrap">VoIP Software Developer</span>
-                {' '}<span className="avoid-wrap">(Jul 2019 - Present)</span></h3>
-              <h4>At Phone.com, a VoIP service provider.</h4>
-              <p>With a team, build a new VoIP call routing service on FreeSWITCH. Implement features and bug fixes in Lua, and connect to a MySQL database. Code managed in GitLab.</p>
+            <h2>Other Experience</h2>
+            <h3>
+              <span className="avoid-wrap">VoIP Software Developer</span>
+              {' '}<span className="avoid-wrap">(Nov 2018 - Present)</span>
+            </h3>
+            <h4>At Phone.com, a VoIP service provider.</h4>
+            <p>
+              Built the web applications listed above. On a team, built and deployed a new VoIP call routing service on FreeSWITCH, running on Debian. Implemented features and bug fixes in Lua, with code managed in GitLab. Also wrote some Jira customizations using Groovy.
+            </p>
 
-              <h3>
-                <span className="avoid-wrap">VoIP Systems Analyst</span>
-                {' '}<span className="avoid-wrap">(Nov 2018 - Jul 2019)</span></h3>
-              <h4>At Phone.com, a VoIP service provider.</h4>
-              <p>Various projects surrounding VoIP KPIs and monitoring, including building two full stack Node.js applications from scratch:</p>
-              <ol>
-                <li><em>Call records search tool:</em> built in AWS, including a dedicated VPC, RDS database, storage in S3, Lambda Functions to process recordings and collect and reconcile API data, and SNS alerts for error handling.</li>
-                <li><em>VoIP Stats tool:</em> collect and display call statistics and alerts, with a local MySQL database, connections to the PagerDuty and Jira APIs, D3 for data visualizations, uptime calculated on-the-fly for any time range, and various Bash scripts for collecting images from other web services.</li>
-              </ol>
+            <h3>
+              <span className="avoid-wrap">Software Quality Assurance Specialist</span>
+              {' '}<span className="avoid-wrap">(Feb 2018 - Oct 2018)</span>
+            </h3>
+            <h4>At Phone.com, a VoIP service provider.</h4>
+            <p>
+              Tested in-house applications (Android, iOS, macOS, Windows) and VoIP call
+              routing software. Wrote regression tests, documented bugs, and worked with
+              developers to improve user experience. Accessed code in Android Studio and
+              Xcode to assist in bug tracking. Wrote some XML changes in the Android application and some HTML
+              that was used in the macOS application.
+            </p>
 
-              <h3>
-                <span className="avoid-wrap">Software Quality Assurance Specialist</span>
-                {' '}<span className="avoid-wrap">(Feb 2018 - Oct 2018)</span></h3>
-              <h4>At Phone.com, a VoIP service provider.</h4>
-              <p>Tested in-house applications (Android, iOS, macOS, Windows) and VoIP call routing software. Wrote regression tests, documented bugs, and worked with developers to improve user experience.</p>
+            <h3>
+              <span className="avoid-wrap">Web Design and Bug Tracking</span>
+              {' '}<span className="avoid-wrap">(2008-2009, 2011-2012)</span>
+            </h3>
+            <h4>At GreekBill, Inc. and MemberPlanet in Torrance, California.</h4>
+            <p>
+              Redesigned existing website to improve UI/UX, performed QA testing and
+              bug tracking, and wrote functional documentation.
+            </p>
 
-              <h3>
-                <span className="avoid-wrap">English Teacher in South Korea</span>
-                {' '}<span className="avoid-wrap">(2013-2015)</span></h3>
-              <h4>At Guhak Elementary School in Busan, South Korea.</h4>
-              <p>Taught alongside multiple Korean teachers. Brainstormed and planned lessons in conjunction with the Korean teachers, including normal daily English lessons and multi-week summer camps.</p>
+            <h2>Education</h2>
+            <ul>
+              <li>
+                <strong>Wes Bos (online courses): </strong>
+                ES6, Node.js
+              </li>
+              <li>
+                <strong>Colt Steele (online courses): </strong>
+                React, MySQL, Web Developer Bootcamp
+              </li>
+              <li>
+                <strong>CompTIA Network+ </strong>
+                (July 2017)
+              </li>
+              <li>
+                <strong>CompTIA A+ </strong>
+                (July 2016)
+              </li>
+              <li>
+                <strong>SIP School Certified Associate </strong>
+                (June 2018)
+              </li>
+              <li>
+                <strong>BFA in Illustration </strong>
+                from CSU Long Beach (GPA: 3.8, 2007)
+              </li>
+            </ul>
 
-              <h3>
-                <span className="avoid-wrap">Web Design and Bug Tracking</span>
-                {' '}<span className="avoid-wrap">(2008-2009, 2011-2012)</span></h3>
-              <h4>At GreekBill, Inc. and MemberPlanet in Torrance, California.</h4>
-              <p>Redesigned existing website to improve UI/UX, performed QA testing and bug tracking, and wrote functional documentation.</p>
-            </div>
           </div>
         </div>
         <FinalLink url="/contact" text="Get in touch" />
