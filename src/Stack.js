@@ -2,26 +2,23 @@ import React, { Component } from 'react';
 import './Stack.css';
 
 const stackTech = [
-  { name: 'React'       , img: 'react.svg'       },
-  { name: 'Node'        , img: 'node.svg'        },
-  { name: 'Express'     , img: 'express.jpg'     },
-  { name: 'MySQL'       , img: 'mysql.svg'       },
-  { name: 'HTML'        , img: 'html.svg'        },
-  { name: 'CSS'         , img: 'css.svg'         },
-  { name: 'JavaScript'  , img: 'javascript.png'  },
-  { name: 'NGINX'       , img: 'nginx.svg'       },
-  { name: 'Nodemailer'  , img: 'nodemailer.png'  },
-  { name: 'DigitalOcean', img: 'digitalocean.svg'},
-  { name: 'D3'          , img: 'd3.svg'          },
-  { name: 'FreeSWITCH'  , img: 'freeswitch.jpg'  },
-  { name: 'Lua'         , img: 'lua.svg'         },
-  { name: 'MongoDB'     , img: 'mongodb.svg'     },
-  { name: 'Passport'    , img: 'passport.svg'    },
-  { name: 'AWS'         , img: 'aws.svg'         },
-  { name: 'Git'         , img: 'git.svg'         },
-  { name: 'GitHub'      , img: 'github.svg'      },
-  { name: 'GitLab'      , img: 'gitlab.svg'      },
-  { name: 'Bash'        , img: 'bash.svg'        },
+  { name: 'React'       , img: 'react.svg'       , url: 'https://reactjs.org'},
+  { name: 'Node.js'     , img: 'node.svg'        , url: 'https://nodejs.org'},
+  { name: 'Express'     , img: 'express.jpg'     , url: 'https://expressjs.com/'},
+  { name: 'MySQL'       , img: 'mysql.svg'       , url: 'https://www.mysql.com/'},
+  { name: 'NGINX'       , img: 'nginx.svg'       , url: 'https://nginx.org/'},
+  { name: 'Nodemailer'  , img: 'nodemailer.png'  , url: 'https://nodemailer.com/'},
+  { name: 'DigitalOcean', img: 'digitalocean.svg', url: 'https://www.digitalocean.com/'},
+  { name: 'D3.js'       , img: 'd3.svg'          , url: 'https://d3js.org'},
+  { name: 'FreeSWITCH'  , img: 'freeswitch.jpg'  , url: 'https://freeswitch.com/'},
+  { name: 'Lua'         , img: 'lua.svg'         , url: 'https://www.lua.org'},
+  { name: 'MongoDB'     , img: 'mongodb.svg'     , url: 'https://www.mongodb.com'},
+  { name: 'Passport.js' , img: 'passport.svg'    , url: 'http://www.passportjs.org'},
+  { name: 'AWS'         , img: 'aws.svg'         , url: 'https://aws.amazon.com'},
+  { name: 'Git'         , img: 'git.svg'         , url: 'https://git-scm.com'},
+  { name: 'GitHub'      , img: 'github.svg'      , url: 'https://github.com'},
+  { name: 'GitLab'      , img: 'gitlab.svg'      , url: 'https://gitlab.com'},
+  { name: 'Bash'        , img: 'bash.svg'        , url: 'https://www.gnu.org/software/bash/'},
 ];
 
 class Stack extends Component {
@@ -31,25 +28,30 @@ class Stack extends Component {
         {this.props.technologies
           .filter(t => stackTech.find(tech => tech.name === t))
           .map(t => (
-          <div
-            key={t}
-            className={
-              `Stack-img-container ${
-                this.props.format === 'small' && 'Stack-img-container-small'
-              }`
-            }
-          >
-            <img
+            <div
+              key={t}
               className={
-                t === 'Passport'
-                  ? 'Stack-img Stack-drop-shadow'
-                  : 'Stack-img'
+                `Stack-img-container ${
+                  this.props.format === 'small' && 'Stack-img-container-small'
+                }`
               }
-              src={`/images/icons/${stackTech.filter(s => s.name === t)[0].img}`}
-              alt={stackTech.filter(s => s.name === t[0].name)}
-            />
-          </div>
-        ))}
+            >
+              <a
+                href={stackTech.filter(s => s.name === t)[0].url}
+              >
+                <img
+                  className={
+                    t === 'Passport.js'
+                      ? 'Stack-img Stack-drop-shadow'
+                      : 'Stack-img'
+                  }
+                  src={`/images/icons/${stackTech.filter(s => s.name === t)[0].img}`}
+                  alt={stackTech.filter(s => s.name === t)[0].name}
+                  title={stackTech.filter(s => s.name === t)[0].name}
+                />
+              </a>
+            </div>
+          ))}
       </section>
     );
   }

@@ -10,11 +10,15 @@
   padding: 2%;
   margin: 1%;
   border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #fff;
   box-shadow: 0 0.05rem 0.25rem #aaa;
+}
+
+.Stack-img-container a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Stack-img-container-small {
