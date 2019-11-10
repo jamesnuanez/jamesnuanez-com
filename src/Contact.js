@@ -52,48 +52,44 @@ class Contact extends Component {
         <h1>Contact</h1>
         <h2>Let's build something!</h2>
 
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
+        <p>
+          <a
+            className="button"
+            href="mailto:james@jamesnuanez.com"
+          >
+            james@jamesnuanez.com
+          </a>
+        </p>
 
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-          />
-
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={this.state.message}
-            onChange={this.handleChange}
-          ></textarea>
-
-          <div className="Contact-checkbox-container">
-            <input
-              type="checkbox"
-              id="receiveCopy"
-              name="receiveCopy"
-              checked={this.state.receiveCopy}
-              onChange={this.handleChangeCheckbox}
+        <p className="Contact-social">
+          <a href="https://github.com/jamesnuanez">
+            <img
+              src="/images/icons/github.svg"
+              alt="GitHub"
             />
-            <label htmlFor="receiveCopy">Receive a copy</label>
-          </div>
+          </a>
+          <a
+            className="button"
+            href="https://github.com/jamesnuanez"
+          >
+            GitHub
+          </a>
+        </p>
 
-          <button className="button button-large">Send</button>
-        </form>
-
-        {this.state.responseMessage && <p>{this.state.responseMessage}</p>}
+        <p className="Contact-social">
+          <a href="https://www.linkedin.com/in/jamesnuanez">
+            <img
+              src="/images/icons/linkedin.png"
+              alt="LinkedIn"
+            />
+          </a>
+          <a
+            className="button"
+            href="https://www.linkedin.com/in/jamesnuanez"
+          >
+            LinkedIn
+          </a>
+        </p>
 
       </section>
     );
