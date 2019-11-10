@@ -26,12 +26,6 @@
   display: flex;
 }
 
-.ProjectCard-text-left {
-  align-items: flex-end;
-  text-align: left;
-  order: -1;
-}
-
 .ProjectCard-text h2 {
   font-size: 1.8rem;
   margin: 0 0 0.5rem;
@@ -45,6 +39,12 @@
   width: 47%;
   padding: 1rem;
   text-align: right;
+}
+
+.ProjectCard-text-left {
+  align-items: flex-end;
+  text-align: left;
+  order: -1;
 }
 
 .ProjectCard-image {
