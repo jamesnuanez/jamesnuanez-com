@@ -1,14 +1,7 @@
-# James Nuanez: Full Stack Developer
+# James Nuanez
+### Full Stack Developer
+Building clean and modern web applications focused on exceptional user experience.
 
-This website is built with:
+This website was built with React using Create React App.
 
-## Front end
-* React
-* Create React App
-* React Router
-* Axios
-
-## Back end
-* Node.js
-* Express
-* MySQL
+www.jamesnuanez.com
