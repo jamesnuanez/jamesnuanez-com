@@ -36,11 +36,8 @@ class Resume extends Component {
 
           <div className="Resume-content">
             <h2>Full Stack Web Development</h2>
-            <h3>Regarding application hosting</h3>
             <p>
-              Most of the following are run on Debian Linux with NGINX, are hosted on
-              Digital Ocean, and are managed via command line, including Git Hooks for
-              easy deployment, and TLS certification management with Let’s Encrypt.
+              Personal projects and client work run on Debian Linux with NGINX, hosted on Digital Ocean. They are updated using Git Hooks or by pulling from GitHub, and are managed via the command line, including TLS certification management with Let’s Encrypt.
             </p>
             <h3>
               <span className="avoid-wrap">Cash Tracker (personal project)</span>
@@ -48,7 +45,7 @@ class Resume extends Component {
             </h3>
             <h4>cash.jamesnuanez.com</h4>
             <p>
-              Multi-user cash management software. Each user can add and edit transactions and transfer amounts to other users. Review transactions and reconcile balances of individuals or the entire group. Includes user authentication for multiple users on the same account.
+              Multi-user cash management software. Each user can add and edit transactions and transfer amounts to other users. Review transactions and reconcile balances of individuals or the entire group. Includes user authentication for multiple users on the same account. Responsive design.
             </p>
             <h4>Node.js, Express, MySQL</h4>
 
@@ -59,12 +56,12 @@ class Resume extends Component {
             </h3>
             <h4>www.jmmnuanez.com</h4>
             <p>
-              Author website with custom newsletter and contact forms that save to a local database, connect to the MailChimp API, and send custom-designed emails to the author and optionally to the site visitor. Contact form includes spam filtering and optional newsletter sign-up. Includes Newsletter subscription modification, use of the JavaScript history API, and responsive design.
+              Responsive website with custom newsletter and contact forms that save to a local database, connect to the MailChimp API, send custom-designed emails to the author and optionally to the site visitor, allow newsletter subscription modification, and include spam filtering. Makes use of the JavaScript history API.
             </p>
             <h4>Node.js, Express, MySQL, MailChimp API</h4>
 
             <h3>
-              <span className="avoid-wrap">Starter App (personal project)</span>
+              <span className="avoid-wrap">Node.js MongoDB Starter App (personal project)</span>
               {' '}<span className="avoid-wrap"> -- 2019</span>
             </h3>
             <h4>starter.jamesnuanez.com</h4>
@@ -103,7 +100,7 @@ class Resume extends Component {
             </h3>
             <h4>www.sweetviapatisserie.com</h4>
             <p>
-              Responsive website for a local patisserie. Connects to the Instagram API to display recent images and includes custom contact forms for customers to ask questions or place orders. Forms include spam filtering and messages are emailed to the business owner.
+              Responsive website that connects to the Instagram API to display recent images and includes custom contact forms for customers to ask questions or place orders. Forms include spam filtering and messages are emailed to the business owner.
             </p>
             <h4>Node.js, Express, Instagram API</h4>
 
@@ -112,7 +109,7 @@ class Resume extends Component {
               <span className="avoid-wrap">VoIP Software Developer</span>
               {' '}<span className="avoid-wrap">(Nov 2018 - Present)</span>
             </h3>
-            <h4>At Phone.com, a VoIP service provider.</h4>
+            <h4>At Phone.com in Poway, California</h4>
             <p>
               Built the web applications listed above. On a team, built and deployed a new VoIP call routing service on FreeSWITCH, running on Debian. Implemented features and bug fixes in Lua, with code managed in GitLab. Also wrote some Jira customizations using Groovy.
             </p>
@@ -121,23 +118,18 @@ class Resume extends Component {
               <span className="avoid-wrap">Software Quality Assurance Specialist</span>
               {' '}<span className="avoid-wrap">(Feb 2018 - Oct 2018)</span>
             </h3>
-            <h4>At Phone.com, a VoIP service provider.</h4>
+            <h4>At Phone.com in Poway, California</h4>
             <p>
-              Tested in-house applications (Android, iOS, macOS, Windows) and VoIP call
-              routing software. Wrote regression tests, documented bugs, and worked with
-              developers to improve user experience. Accessed code in Android Studio and
-              Xcode to assist in bug tracking. Wrote some XML changes in the Android application and some HTML
-              that was used in the macOS application.
+              Tested in-house applications (Android, iOS, macOS, Windows) and VoIP call routing software. Wrote regression tests, documented bugs, and worked with developers to improve user experience. Accessed code in Android Studio and Xcode to assist in bug tracking. Wrote some XML changes in the Android application and some HTML that was used in the macOS application.
             </p>
 
             <h3>
               <span className="avoid-wrap">Web Design and Bug Tracking</span>
               {' '}<span className="avoid-wrap">(2008-2009, 2011-2012)</span>
             </h3>
-            <h4>At GreekBill, Inc. and MemberPlanet in Torrance, California.</h4>
+            <h4>At GreekBill, Inc. and MemberPlanet in Torrance, California</h4>
             <p>
-              Redesigned existing website to improve UI/UX, performed QA testing and
-              bug tracking, and wrote functional documentation.
+              Redesigned existing website to improve UI/UX, performed QA testing and bug tracking, and wrote functional documentation.
             </p>
 
             <h2>Education</h2>
