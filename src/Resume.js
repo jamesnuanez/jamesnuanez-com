@@ -10,6 +10,20 @@ class Resume extends Component {
   render() {
     return (
       <section className="Resume">
+        <div className="Resume-downloads">
+          <a
+            className="text-link"
+            href="/james-nuanez-resume.pdf"
+          >
+            Download as .pdf
+          </a>
+          <a
+            className="text-link"
+            href="/james-nuanez-resume.doc"
+          >
+            Download as .doc
+          </a>
+        </div>
         <div className="Resume-page">
           <h1>James Nuanez</h1>
           <p className="Resume-links">

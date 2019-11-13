@@ -53,12 +53,30 @@
   padding: 0 0.5rem ;
 }
 
+/*---------------------------------------------------------------------------*/
+/* DOWNLOAD LINKS */
+/*---------------------------------------------------------------------------*/
+.Resume-downloads {
+  margin: 2rem 0;
+  text-align: right;
+}
 
 /*---------------------------------------------------------------------------*/
 /* MOBILE */
 /*---------------------------------------------------------------------------*/
 
 @media (max-width: 600px) {
+  .Resume-downloads {
+    border-bottom: 1px solid #aaa;
+    text-align: left;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .Resume-downloads .text-link:first-of-type {
+    margin-left: -0.5rem;
+  }
+
   .Resume-page {
     margin-bottom: 3rem;
     padding: 0;
