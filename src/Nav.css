@@ -44,38 +44,19 @@
   text-decoration: none;
 }
 
-.Nav a:before {
-  content: '';
-  position: absolute;
-  background-color: #fff;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 0;
-  z-index: -1;
-  transition: 0.1s all ease-in;
-}
-
 .Nav a:after {
   content: '';
   position: absolute;
   background-color: #CF7A36;
-  top: 0;
+  top: 100%;
   left: 50%;
-  height: 107%;
+  height: 7%;
   width: 0;
   z-index: -2;
   transition: 0.1s all ease-in;
 }
 
-.Nav a:hover:before {
-  background-color: #fff;
-  left: 0;
-  width: 100%;
-}
-
 .Nav a:hover:after {
-  background-color: #CF7A36;
   left: 7.5%;
   width: 85%;
 }
@@ -100,20 +81,9 @@
   background-color: #EFD391;
 }
 
-.Nav a.Nav-active:hover {
-  background-color: #EFD391;
-}
-
 .Nav a.Nav-active:after {
-  content: '';
-  position: absolute;
-  background-color: #CF7A36;
-  top: 0;
   left: 7.5%;
-  height: 107%;
   width: 85%;
-  z-index: -2;
-  transition: 0.1s all ease-in;
 }
 
 .Nav a.Nav-active:hover:after {
