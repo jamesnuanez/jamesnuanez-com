@@ -39,7 +39,7 @@ class ProjectPage extends Component {
       <section className="ProjectPage" onClick={this.closeModal}>
         <div className="ProjectPage-modal" onClick={this.dontCloseModal}>
           <button className="ProjectPage-close-button" onClick={this.closeModal}>
-            X
+            &#x2715;
           </button>
 
           {/*--------------------------------------*/}
