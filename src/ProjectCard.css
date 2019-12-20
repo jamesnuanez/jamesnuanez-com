@@ -5,7 +5,6 @@
   justify-content: space-between;
   margin-bottom: 3rem;
   box-shadow: 0 0.1rem 0.5rem #aaa;
-  border-radius: 0.5rem;
   overflow: hidden;
   flex-direction: column;
 }
