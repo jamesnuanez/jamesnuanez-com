@@ -52,6 +52,12 @@ class Contact extends Component {
         <h1>Contact</h1>
         <h2>Let's build something!</h2>
 
+        <p style={{ maxWidth: '30rem', margin: 'auto', fontSize: '1.3rem' }}>
+          I am currently accepting contract and consulting work for front
+          end, back end, and full stack web applications,
+          specializing in Node and React.
+        </p>
+
         <p>
           <a
             className="button"
