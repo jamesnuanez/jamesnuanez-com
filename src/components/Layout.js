@@ -15,6 +15,7 @@ const Nav = styled.nav`
   flex-direction: column;
   text-align: right;
   box-shadow: ${({ theme }) => theme.shadowNav};
+  z-index: 100;
 `
 
 const NavTitle = styled.h1`
@@ -36,6 +37,7 @@ const StyledNavLink = styled(Link)`
   color: ${({ theme }) => theme.dark};
   outline: 0;
   & > span {
+    position: relative;
     height: 4rem;
     padding: 1rem 1.75rem;
     display: flex;
@@ -83,7 +85,9 @@ const NavLink = props => (
 const Main = styled.main`
   width: calc(100vw - 11rem);
   height: 100vh;
+  padding: 0 1rem;
   overflow: auto;
+  background: #eee;
 `
 
 const theme = {
