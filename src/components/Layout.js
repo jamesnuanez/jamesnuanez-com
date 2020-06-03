@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import "../global-styles.css"
 
 const Page = styled.div`
@@ -14,8 +14,7 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   text-align: right;
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25),
-    0 0.125rem 1rem rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadowNav};
 `
 
 const NavTitle = styled.h1`
@@ -27,14 +26,14 @@ const NavTitle = styled.h1`
 const NavTitleLink = styled(Link)`
   padding: 0.5rem;
   text-decoration: none;
-  color: #383a4e;
+  color: ${({ theme }) => theme.dark};
   outline: 0;
 `
 
 const StyledNavLink = styled(Link)`
   text-decoration: none;
   margin-bottom: 0.5rem;
-  color: #383a4e;
+  color: ${({ theme }) => theme.dark};
   outline: 0;
   & > span {
     height: 4rem;
@@ -46,30 +45,32 @@ const StyledNavLink = styled(Link)`
     outline: 0;
   }
   &:focus > span {
-    box-shadow: inset 0 0.125rem #383a4e, inset -0.125rem -0.125rem #383a4e;
-    background: rgba(56, 58, 78, 0.05);
+    box-shadow: inset 0 0.25rem ${({ theme }) => theme.dark},
+      inset -0.25rem -0.25rem ${({ theme }) => theme.dark};
+    background: rgba(${({ theme }) => theme.darkRgb}, 0.05);
   }
   &:hover > span {
-    background: rgba(56, 58, 78, 0.1);
+    background: rgba(${({ theme }) => theme.darkRgb}, 0.1);
   }
 
   //=====================
   // ACTIVE NAV LINK
   //=====================
   &.active > span {
-    background: #383a4e;
+    background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
     color: #fff;
   }
   &.active:focus > span {
-    box-shadow: inset 0 0.125rem #383a4e, inset -0.125rem -0.125rem #383a4e;
-    background: rgba(56, 58, 78, 0.8);
+    box-shadow: inset 0 0.25rem ${({ theme }) => theme.dark},
+      inset -0.25rem -0.25rem ${({ theme }) => theme.dark};
+    background: rgba(${({ theme }) => theme.darkRgb}, 0.8);
   }
   &.active:hover > span {
-    background: #272336;
+    background: rgba(${({ theme }) => theme.darkRgb}, 1);
     color: #fff;
   }
   &.active:focus:hover > span {
-    background: rgba(56, 58, 78, 0.9);
+    background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
   }
 `
 
@@ -85,22 +86,36 @@ const Main = styled.main`
   overflow: auto;
 `
 
+const theme = {
+  dark: "#383a4e",
+  darkRgb: "56, 58, 78",
+  light: "#6d748d",
+  lightRgb: "109, 116, 141",
+  shadowSmall: "0 0.125rem 1rem rgba(56, 58, 78, 0.25)",
+  shadowMedium: "0 0.125rem 2rem rgba(56, 58, 78, 0.15)",
+  shadowLarge:
+    "0 0.5rem 0.5rem rgba(56, 58, 78, 0.1), 0 1rem 2rem rgba(56, 58, 78, 0.25)",
+  shadowNav: "0 0 1rem rgba(56, 58, 78, 0.1), 0 0 2rem rgba(56, 58, 78, 0.25)",
+}
+
 export default function Layout({ children }) {
   return (
-    <Page>
-      <Nav>
-        <NavTitle>
-          <NavTitleLink tabIndex="-1" to="/">
-            JN
-          </NavTitleLink>
-        </NavTitle>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/work">Work</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/process">Process</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </Nav>
-      <Main>{children}</Main>
-    </Page>
+    <ThemeProvider theme={theme}>
+      <Page>
+        <Nav>
+          <NavTitle>
+            <NavTitleLink tabIndex="-1" to="/">
+              JN
+            </NavTitleLink>
+          </NavTitle>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/work">Work</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/process">Process</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </Nav>
+        <Main>{children}</Main>
+      </Page>
+    </ThemeProvider>
   )
 }
