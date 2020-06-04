@@ -22,7 +22,7 @@ export default function Home() {
           center
           title="I am James Nuanez"
           links={[
-            { wide: true, to: "/work", text: "View my work" },
+            { wide: true, to: "/work/", text: "View my work" },
             {
               wide: true,
               external: true,

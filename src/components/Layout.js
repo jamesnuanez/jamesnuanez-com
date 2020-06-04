@@ -229,10 +229,10 @@ export default function Layout({ pageTitle, children }) {
               <span tabIndex="-1">☰</span>
             </MenuIcon>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/work">Work</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/process">Process</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/work/">Work</NavLink>
+            <NavLink to="/about/">About</NavLink>
+            <NavLink to="/process/">Process</NavLink>
+            <NavLink to="/contact/">Contact</NavLink>
           </NavLinks>
         </Nav>
         <Main>{children}</Main>

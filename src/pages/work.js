@@ -107,7 +107,7 @@ export default function Work() {
           url="https://www.jmmnuanez.com"
           linkText="Visit website"
         />
-        <PageEndLink link="/about" text="Learn more about me" />
+        <PageEndLink link="/about/" text="Learn more about me" />
       </Content>
     </Layout>
   )

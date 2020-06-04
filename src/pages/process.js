@@ -82,7 +82,7 @@ export default function Process() {
           </P>
         </TextContainer>
 
-        <PageEndLink link="/contact" text="Get in touch with me" />
+        <PageEndLink link="/contact/" text="Get in touch with me" />
       </Content>
     </Layout>
   )
