@@ -9,6 +9,9 @@ import aboutPhoto from "../images/about-james-nuanez.jpg"
 const Content = styled.div`
   max-width: 40rem;
   margin: 4rem auto 10rem;
+  @media (max-width: 1023px) {
+    margin-top: 2rem;
+  }
 `
 
 const Img = styled.img`
@@ -17,6 +20,9 @@ const Img = styled.img`
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: ${({ theme }) => theme.shadowLarge};
+  @media (max-width: 1023px) {
+    margin-bottom: 1rem;
+  }
 `
 
 const P = styled(OriginalP)`
@@ -27,7 +33,7 @@ const P = styled(OriginalP)`
 `
 export default function About() {
   return (
-    <Layout>
+    <Layout pageTitle="About">
       <Content>
         <Img
           src={aboutPhoto}

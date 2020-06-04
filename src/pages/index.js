@@ -9,6 +9,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 700px) {
+    min-height: calc(100vh - 3.5rem);
+  }
 `
 
 export default function Home() {

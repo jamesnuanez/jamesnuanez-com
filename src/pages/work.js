@@ -13,11 +13,17 @@ import workImgJmmnuanez from "../images/work-example-jmmnuanez.jpg"
 const Content = styled.div`
   max-width: 60rem;
   margin: 6rem auto 10rem;
+  @media (max-width: 1023px) {
+    margin-top: 2rem;
+  }
 `
 
 const StyledCard = styled.section`
   display: flex;
   margin-bottom: 6rem;
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
 `
 
 const ImgContainer = styled.div`
@@ -31,12 +37,21 @@ const ImgContainer = styled.div`
     border-radius: 0.5rem;
     box-shadow: ${({ theme }) => theme.shadowLarge};
   }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
 `
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  @media (max-width: 1023px) {
+    align-items: center;
+  }
 `
 
 const Card = props => (
@@ -55,7 +70,7 @@ const Card = props => (
 
 export default function Work() {
   return (
-    <Layout>
+    <Layout pageTitle="Work">
       <Content>
         <Card
           imgSrc={workImgTarPitStudios}

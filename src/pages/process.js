@@ -8,11 +8,14 @@ import P from "../components/elements/P"
 const Content = styled.div`
   max-width: 40rem;
   margin: 4rem auto 10rem;
+  @media (max-width: 1023px) {
+    margin-top: 2rem;
+  }
 `
 
 export default function Process() {
   return (
-    <Layout>
+    <Layout pageTitle="Process">
       <Content>
         <TextContainer title="Planning">
           <P>

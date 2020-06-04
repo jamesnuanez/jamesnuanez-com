@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 import "../global-styles.css"
@@ -16,12 +16,25 @@ const Nav = styled.nav`
   text-align: right;
   box-shadow: ${({ theme }) => theme.shadowNav};
   z-index: 100;
+  @media (max-width: 700px) {
+    position: fixed;
+    background: ${({ theme }) => theme.dark};
+    color: rgba(255, 255, 255, 0.75);
+    height: 3.5rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `
 
 const NavTitle = styled.h1`
   margin: 2.5rem 1.25rem 1.5rem;
   font-size: 2rem;
   font-weight: normal;
+  @media (max-width: 700px) {
+    margin: 0;
+    font-size: 1.5rem;
+  }
 `
 
 const NavTitleLink = styled(Link)`
@@ -29,6 +42,77 @@ const NavTitleLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.dark};
   outline: 0;
+  @media (max-width: 700px) {
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: unset;
+  }
+`
+
+const PageTitle = styled.h1`
+  display: none;
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+`
+
+const MenuIcon = styled.button`
+  display: none;
+  @media (max-width: 700px) {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: none;
+    outline: 0;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    & > span {
+      position: relative;
+      height: 3.5rem;
+      width: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: 0;
+    }
+    &:focus > span {
+      box-shadow: inset 0 0 0 0.25rem rgba(255, 255, 255, 0.75);
+    }
+    ${({ inMenu, theme }) =>
+      inMenu &&
+      `
+      color: ${theme.dark};
+      align-self: flex-end;
+      margin-bottom: 0.5rem;
+      &:focus > span {
+        box-shadow: inset 0 0 0 0.25rem ${theme.dark};
+      }
+    `}
+  }
+`
+
+const NavLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
+  @media (max-width: 700px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow: auto;
+    background: #fff;
+    box-shadow: ${({ theme }) => theme.shadowLarge};
+    ${({ closed }) => closed && `display: none;`}
+  }
 `
 
 const StyledNavLink = styled(Link)`
@@ -63,8 +147,6 @@ const StyledNavLink = styled(Link)`
     color: #fff;
   }
   &.active:focus > span {
-    box-shadow: inset 0 0.25rem ${({ theme }) => theme.dark},
-      inset -0.25rem -0.25rem ${({ theme }) => theme.dark};
     background: rgba(${({ theme }) => theme.darkRgb}, 0.8);
   }
   &.active:hover > span {
@@ -73,6 +155,16 @@ const StyledNavLink = styled(Link)`
   }
   &.active:focus:hover > span {
     background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
+  }
+
+  //=====================
+  // MOBILE
+  //=====================
+  @media (max-width: 700px) {
+    &:focus > span {
+      box-shadow: inset 0 0.25rem ${({ theme }) => theme.dark},
+        inset 0.25rem -0.25rem ${({ theme }) => theme.dark};
+    }
   }
 `
 
@@ -85,9 +177,13 @@ const NavLink = props => (
 const Main = styled.main`
   width: calc(100vw - 11rem);
   height: 100vh;
-  padding: 0 1rem;
+  padding: 0 2rem;
   overflow: auto;
   background: #eee;
+  @media (max-width: 700px) {
+    width: 100%;
+    padding: 3.5rem 0.5rem 0;
+  }
 `
 
 const theme = {
@@ -102,7 +198,19 @@ const theme = {
   shadowNav: "0 0 1rem rgba(56, 58, 78, 0.1), 0 0 2rem rgba(56, 58, 78, 0.25)",
 }
 
-export default function Layout({ children }) {
+export default function Layout({ pageTitle, children }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const toggleMenu = e => {
+    e.stopPropagation()
+    setMenuOpen(!menuOpen)
+  }
+  useEffect(() => {
+    const closeMenu = e => setMenuOpen(false)
+    window.addEventListener("click", closeMenu)
+    return () => {
+      window.removeEventListener("click", closeMenu)
+    }
+  })
   return (
     <ThemeProvider theme={theme}>
       <Page>
@@ -112,11 +220,20 @@ export default function Layout({ children }) {
               JN
             </NavTitleLink>
           </NavTitle>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/work">Work</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/process">Process</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
+          <MenuIcon onClick={toggleMenu}>
+            <span tabIndex="-1">☰</span>
+          </MenuIcon>
+          <NavLinks closed={!menuOpen} onClick={e => e.stopPropagation()}>
+            <MenuIcon inMenu onClick={toggleMenu}>
+              <span tabIndex="-1">☰</span>
+            </MenuIcon>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/work">Work</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/process">Process</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+          </NavLinks>
         </Nav>
         <Main>{children}</Main>
       </Page>

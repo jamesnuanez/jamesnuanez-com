@@ -9,11 +9,18 @@ const StyledTextContainer = styled.div`
   border-radius: 1rem;
   background: #fff;
   box-shadow: ${({ theme }) => theme.shadowLarge};
+  @media (max-width: 700px) {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+  }
   ${({ center, narrow }) =>
     center &&
     `
     max-width: ${narrow ? `24rem` : `27.7rem`};
-    margin: 5vh 0 20vh;
+    margin: 5vh 0 10vh;
+    @media (max-width: 700px) {
+      margin: 2rem 0;
+    }
   `}
 `
 
