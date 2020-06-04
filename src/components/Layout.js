@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
+import { Helmet } from "react-helmet"
 import "../global-styles.css"
 
 const Page = styled.div`
@@ -213,6 +214,15 @@ export default function Layout({ pageTitle, children }) {
   })
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <html lang="en" />
+        <title>James Nuanez</title>
+        <meta name="theme-color" content="#383a4e" data-react-helmet="true" />
+        <meta
+          name="description"
+          content="I build fast, responsive, and accessible websites and web applications, from design to deployment, that deliver exceptional user experience."
+        />
+      </Helmet>
       <Page>
         <Nav>
           <NavTitle>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import TextContainer from "../components/blocks/TextContainer"
 import P from "../components/elements/P"
@@ -30,6 +31,13 @@ export default function Contact() {
   }, [])
   return (
     <Layout pageTitle="Contact">
+      <Helmet>
+        <title>Contact | James Nuanez</title>
+        <meta
+          name="description"
+          content="Let's work together! I am currently accepting front end and full stack positions. I like variety, so I'm open to both consulting and full time positions."
+        />
+      </Helmet>
       <Container>
         <TextContainer
           center

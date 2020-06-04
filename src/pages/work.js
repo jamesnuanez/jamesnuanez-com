@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import PageEndLink from "../components/blocks/PageEndLink"
 import P from "../components/elements/P"
@@ -71,6 +72,13 @@ const Card = props => (
 export default function Work() {
   return (
     <Layout pageTitle="Work">
+      <Helmet>
+        <title>Work | James Nuanez</title>
+        <meta
+          name="description"
+          content="Examples of websites and web applications that I have built."
+        />
+      </Helmet>
       <Content>
         <Card
           imgSrc={workImgTarPitStudios}

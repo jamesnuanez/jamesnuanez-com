@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import OriginalP from "../components/elements/P"
 import TextContainer from "../components/blocks/TextContainer"
@@ -34,6 +35,13 @@ const P = styled(OriginalP)`
 export default function About() {
   return (
     <Layout pageTitle="About">
+      <Helmet>
+        <title>About | James Nuanez</title>
+        <meta
+          name="description"
+          content="I build things for the web. I specialize in React, but I also have experience building APIs and full stack applications with Node.js. I love wrapping my head around a complex idea and building it from the ground up, as well as analyzing an existing application and finding ways to improve it. I have a strong drive for excellence and I'm heavily focused on user experience."
+        />
+      </Helmet>
       <Content>
         <Img
           src={aboutPhoto}

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import TextContainer from "../components/blocks/TextContainer"
 import PageEndLink from "../components/blocks/PageEndLink"
@@ -16,6 +17,13 @@ const Content = styled.div`
 export default function Process() {
   return (
     <Layout pageTitle="Process">
+      <Helmet>
+        <title>Process | James Nuanez</title>
+        <meta
+          name="description"
+          content="My general process, covering everything from planning to tooling."
+        />
+      </Helmet>
       <Content>
         <TextContainer title="Planning">
           <P>
