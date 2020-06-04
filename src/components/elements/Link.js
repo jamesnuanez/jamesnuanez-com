@@ -87,6 +87,7 @@ export default function StyledLink(props) {
       <span tabIndex="-1">
         {props.icon && <img src={props.icon} alt="" />}
         {props.children}
+        {props.noScriptText && <noscript>{props.noScriptText}</noscript>}
       </span>
     </ExternalLink>
   ) : (

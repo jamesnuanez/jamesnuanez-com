@@ -18,17 +18,16 @@ const Container = styled.div`
 `
 
 export default function Contact() {
-  const windowIsMobile = window.matchMedia("(max-width: 400px)")
-  const [isMobile, setIsMobile] = useState(() =>
-    windowIsMobile.matches ? true : false
-  )
+  const [isMobile, setIsMobile] = useState(null)
   useEffect(() => {
+    const windowIsMobile = window.matchMedia("(max-width: 400px)")
+    setIsMobile(windowIsMobile.matches)
     const setIfMobile = e => setIsMobile(e.matches)
     windowIsMobile.addListener(setIfMobile)
     return () => {
       windowIsMobile.removeListener(setIfMobile)
     }
-  })
+  }, [])
   return (
     <Layout pageTitle="Contact">
       <Container>
@@ -43,21 +42,36 @@ export default function Contact() {
               dark: true,
               href: "mailto:james@jamesnuanez.com",
               icon: email,
-              text: isMobile ? "Email" : "james@jamesnuanez.com",
+              text: isMobile
+                ? "Email"
+                : isMobile === false
+                ? "james@jamesnuanez.com"
+                : "",
+              noScriptText: "Email",
             },
             {
               wide: true,
               external: true,
               href: "https://github.com/jamesnuanez",
               icon: github,
-              text: isMobile ? "GitHub" : "github.com/jamesnuanez",
+              text: isMobile
+                ? "GitHub"
+                : isMobile === false
+                ? "github.com/jamesnuanez"
+                : "",
+              noScriptText: "GitHub",
             },
             {
               wide: true,
               external: true,
               href: "https://www.linkedin.com/in/jamesnuanez",
               icon: linkedin,
-              text: isMobile ? "LinkedIn" : "linkedin.com/in/jamesnuanez",
+              text: isMobile
+                ? "LinkedIn"
+                : isMobile === false
+                ? "linkedin.com/in/jamesnuanez"
+                : "",
+              noScriptText: "LinkedIn",
             },
           ]}
         >
