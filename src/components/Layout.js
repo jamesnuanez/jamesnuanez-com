@@ -87,16 +87,6 @@ const MenuIcon = styled.button`
     &:focus > span {
       box-shadow: inset 0 0 0 0.25rem rgba(255, 255, 255, 0.75);
     }
-    ${({ inMenu, theme }) =>
-      inMenu &&
-      `
-      color: ${theme.dark};
-      align-self: flex-end;
-      margin-bottom: 0.5rem;
-      &:focus > span {
-        box-shadow: inset 0 0 0 0.25rem ${theme.dark};
-      }
-    `}
   }
 `
 
@@ -106,12 +96,15 @@ const NavLinks = styled.div`
   z-index: 101;
   @media (max-width: 700px) {
     position: fixed;
-    top: 0;
+    top: 3.5rem;
     right: 0;
-    height: 100vh;
+    height: calc(100vh - 3.5rem);
+    padding-top: 0.5rem;
     overflow: auto;
     background: #fff;
-    box-shadow: ${({ theme }) => theme.shadowLarge};
+    box-shadow: ${({ theme }) => theme.shadowLarge},
+      inset 0 3rem 1rem -3rem rgba(${({ theme }) => theme.darkRgb}, 0.1),
+      inset 0 3rem 2rem -3rem rgba(${({ theme }) => theme.darkRgb}, 0.25);
     ${({ closed }) => closed && `display: none;`}
   }
 `
@@ -235,9 +228,6 @@ export default function Layout({ pageTitle, children }) {
             <span tabIndex="-1">☰</span>
           </MenuIcon>
           <NavLinks closed={!menuOpen} onClick={e => e.stopPropagation()}>
-            <MenuIcon inMenu onClick={toggleMenu}>
-              <span tabIndex="-1">☰</span>
-            </MenuIcon>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/work/">Work</NavLink>
             <NavLink to="/about/">About</NavLink>
