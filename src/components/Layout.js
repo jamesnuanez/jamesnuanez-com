@@ -215,6 +215,30 @@ export default function Layout({ pageTitle, children }) {
           name="description"
           content="I build fast, responsive, and accessible websites and web applications, from design to deployment, that deliver exceptional user experience."
         />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png?v=20200604"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png?v=20200604"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png?v=20200604"
+        />
+        <link rel="manifest" href="/site.webmanifest?v=20200604" />
+        <link
+          rel="mask-icon"
+          href="/safari-pinned-tab.svg?v=20200604"
+          color="#383a4e"
+        />
+        <meta name="msapplication-TileColor" content="#383a4e" />
       </Helmet>
       <Page>
         <Nav>

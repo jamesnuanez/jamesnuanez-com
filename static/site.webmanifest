@@ -1,0 +1,22 @@
+{
+  "lang": "en-US",
+  "name": "James Nuanez",
+  "short_name": "James Nuanez",
+  "description": "I build fast, responsive, and accessible websites and web applications, from design to deployment, that deliver exceptional user experience.",
+  "theme_color": "#383a4e",
+  "background_color": "#eeeeee",
+  "display": "standalone",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png?v=20200604",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=20200604",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
