@@ -18,7 +18,7 @@ export default function Process() {
           <P>
             Probably the most critical portion of building an application, I use
             pen, paper, whiteboards, and meandering walks to allow my brain the
-            space to disect a goal, look at it from as many angles as possible,
+            space to dissect a goal, look at it from as many angles as possible,
             and organize an approach to tackling it.
           </P>
         </TextContainer>
@@ -62,7 +62,7 @@ export default function Process() {
             <strong>tape</strong> for testing. I deploy to{" "}
             <strong>Linux</strong> virtual machines on{" "}
             <strong>DigitalOcean</strong> or <strong>AWS</strong>, served with{" "}
-            <strong>NGINX</strong>, with SSL certificates through{" "}
+            <strong>NGINX</strong>, with TLS certificates through{" "}
             <strong>Let's Encrypt</strong>.
           </P>
         </TextContainer>
