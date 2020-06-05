@@ -46,7 +46,7 @@ const NavTitleLink = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: unset;
+    color: inherit;
   }
 `
 

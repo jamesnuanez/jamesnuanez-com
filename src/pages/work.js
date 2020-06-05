@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import PageEndLink from "../components/blocks/PageEndLink"
-import P from "../components/elements/P"
+import OriginalP from "../components/elements/P"
 import Link from "../components/elements/Link"
 import workImgTarPitStudios from "../images/work-example-tar-pit-studios.jpg"
 import workImgJambonz from "../images/work-example-jambonz.jpg"
@@ -35,7 +35,7 @@ const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   & > img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 0.5rem;
     box-shadow: ${({ theme }) => theme.shadowLarge};
   }
@@ -47,13 +47,19 @@ const ImgContainer = styled.div`
   }
 `
 const TextContainer = styled.div`
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   @media (max-width: 1023px) {
+    width: 100%;
     align-items: center;
   }
+`
+
+const P = styled(OriginalP)`
+  width: 100%;
 `
 
 const Card = props => (
