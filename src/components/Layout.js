@@ -73,16 +73,22 @@ const MenuIcon = styled.button`
     background: none;
     outline: 0;
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.75);
     cursor: pointer;
     & > span {
       position: relative;
       height: 3.5rem;
       width: 3.5rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       outline: 0;
+    }
+    & > span > span {
+      background: rgba(255, 255, 255, 0.75);
+      height: 0.125rem;
+      width: 1.5rem;
+      margin: 0.1875rem;
     }
     &:focus > span {
       box-shadow: inset 0 0 0 0.25rem rgba(255, 255, 255, 0.75);
@@ -249,7 +255,11 @@ export default function Layout({ pageTitle, children }) {
           </NavTitle>
           {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
           <MenuIcon onClick={toggleMenu}>
-            <span tabIndex="-1">☰</span>
+            <span tabIndex="-1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </MenuIcon>
           <NavLinks closed={!menuOpen} onClick={e => e.stopPropagation()}>
             <NavLink to="/">Home</NavLink>
