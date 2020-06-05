@@ -8,9 +8,10 @@ import P from "../components/elements/P"
 
 const Content = styled.div`
   max-width: 40rem;
-  margin: 4rem auto 10rem;
+  padding: 4rem 0 10rem;
+  margin: auto;
   @media (max-width: 1023px) {
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
 `
 

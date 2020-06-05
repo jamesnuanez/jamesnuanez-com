@@ -13,9 +13,10 @@ import workImgJmmnuanez from "../images/work-example-jmmnuanez.jpg"
 
 const Content = styled.div`
   max-width: 60rem;
-  margin: 6rem auto 10rem;
+  padding: 6rem 0 10rem;
+  margin: auto;
   @media (max-width: 1023px) {
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
 `
 

@@ -4,21 +4,18 @@ import styled, { ThemeProvider } from "styled-components"
 import { Helmet } from "react-helmet"
 import "../global-styles.css"
 
-const Page = styled.div`
-  display: flex;
-`
-
 const Nav = styled.nav`
+  position: fixed;
   height: 100vh;
   width: 11rem;
   overflow: auto;
   display: flex;
   flex-direction: column;
   text-align: right;
+  background: #fff;
   box-shadow: ${({ theme }) => theme.shadowNav};
-  z-index: 100;
   @media (max-width: 700px) {
-    position: fixed;
+    overflow: visible;
     background: ${({ theme }) => theme.dark};
     color: rgba(255, 255, 255, 0.75);
     height: 3.5rem;
@@ -98,7 +95,6 @@ const MenuIcon = styled.button`
 const NavLinks = styled.div`
   display: flex;
   flex-direction: column;
-  z-index: 101;
   @media (max-width: 700px) {
     position: fixed;
     top: 3.5rem;
@@ -107,14 +103,20 @@ const NavLinks = styled.div`
     padding-top: 0.5rem;
     overflow: auto;
     background: #fff;
-    box-shadow: ${({ theme }) => theme.shadowLarge},
-      inset 0 3rem 1rem -3rem rgba(${({ theme }) => theme.darkRgb}, 0.1),
-      inset 0 3rem 2rem -3rem rgba(${({ theme }) => theme.darkRgb}, 0.25);
+    box-shadow: ${({ theme }) => theme.shadowLarge};
     ${({ closed }) => closed && `display: none;`}
   }
 `
 
+const Spacer = styled.div`
+  @media (max-width: 700px) {
+    height: 5rem;
+    flex-shrink: 0;
+  }
+`
+
 const StyledNavLink = styled(Link)`
+  flex-shrink: 0;
   text-decoration: none;
   margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.dark};
@@ -173,13 +175,8 @@ const NavLink = props => (
 )
 
 const Main = styled.main`
-  width: calc(100vw - 11rem);
-  height: 100vh;
-  padding: 0 2rem;
-  overflow: auto;
-  background: #eee;
+  padding: 0 2rem 0 13rem;
   @media (max-width: 700px) {
-    width: 100%;
     padding: 3.5rem 0.5rem 0;
   }
 `
@@ -244,31 +241,30 @@ export default function Layout({ pageTitle, children }) {
         />
         <meta name="msapplication-TileColor" content="#383a4e" />
       </Helmet>
-      <Page>
-        <Nav>
-          <NavTitle>
-            <NavTitleLink tabIndex="-1" to="/">
-              JN
-            </NavTitleLink>
-          </NavTitle>
-          {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
-          <MenuIcon onClick={toggleMenu}>
-            <span tabIndex="-1">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </MenuIcon>
-          <NavLinks closed={!menuOpen} onClick={e => e.stopPropagation()}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/work/">Work</NavLink>
-            <NavLink to="/about/">About</NavLink>
-            <NavLink to="/process/">Process</NavLink>
-            <NavLink to="/contact/">Contact</NavLink>
-          </NavLinks>
-        </Nav>
-        <Main>{children}</Main>
-      </Page>
+      <Nav>
+        <NavTitle>
+          <NavTitleLink tabIndex="-1" to="/">
+            JN
+          </NavTitleLink>
+        </NavTitle>
+        {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
+        <MenuIcon onClick={toggleMenu}>
+          <span tabIndex="-1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </MenuIcon>
+        <NavLinks closed={!menuOpen} onClick={e => e.stopPropagation()}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/work/">Work</NavLink>
+          <NavLink to="/about/">About</NavLink>
+          <NavLink to="/process/">Process</NavLink>
+          <NavLink to="/contact/">Contact</NavLink>
+          <Spacer />
+        </NavLinks>
+      </Nav>
+      <Main>{children}</Main>
     </ThemeProvider>
   )
 }

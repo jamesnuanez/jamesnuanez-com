@@ -357,5 +357,6 @@ template {
 body {
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   height: 100%;
+  background: #eee;
   color: #383a4e;
 }
