@@ -17,7 +17,6 @@ const shared = css`
   outline: 0;
   box-shadow: ${({ theme }) => theme.shadowLarge};
   & > span {
-    position: relative;
     height: 2.75rem;
     padding: 0.5rem ${({ icon }) => (icon ? `1rem` : `1.25rem`)};
     display: flex;

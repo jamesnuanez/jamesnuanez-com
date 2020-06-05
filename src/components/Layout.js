@@ -75,7 +75,6 @@ const MenuIcon = styled.button`
     font-size: 1.5rem;
     cursor: pointer;
     & > span {
-      position: relative;
       height: 3.5rem;
       width: 3.5rem;
       display: flex;
@@ -121,7 +120,6 @@ const StyledNavLink = styled(Link)`
   color: ${({ theme }) => theme.dark};
   outline: 0;
   & > span {
-    position: relative;
     height: 4rem;
     padding: 1rem 1.75rem;
     display: flex;
