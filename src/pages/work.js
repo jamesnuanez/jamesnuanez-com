@@ -90,14 +90,14 @@ export default function Work() {
         <Card
           imgSrc={workImgTarPitStudios}
           imgAlt="Tar Pit Studios Jamstack website and store"
-          text="Art studio website and store built with Next.js to combine the fluidity of React with the speed of static site generation and the flexibility of API routes to provide a true Jamstack experience."
+          text="Jamstack website and store built with Next.js. Statically generated to provide the fastest possible speeds. API routes used to interact with Braintree and Printful for serverless payment processing and product management."
           url="https://www.tarpitstudios.com"
           linkText="Visit website"
         />
         <Card
           imgSrc={workImgJambonz}
           imgAlt="Front end for Jambonz communications platform as a service"
-          text="Front end for provisioning and configuring a communications platform as a service, built with Create React App and styled-components. Features include sorting table content, bulk editing, and extensive data validation."
+          text="Front end for provisioning and configuring a communications platform as a service, built with Create React App (using React Hooks) and styled-components. Features include sorting table content, bulk editing, and extensive data validation."
           url="https://github.com/jambonz/jambonz-webapp"
           linkText="View code on GitHub"
         />

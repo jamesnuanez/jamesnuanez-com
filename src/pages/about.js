@@ -52,9 +52,9 @@ export default function About() {
           <P>
             I build things for the web. I specialize in React, but I also have
             experience building APIs and full stack applications with Node.js. I
-            love wrapping my head around a complex idea and building it from the
-            ground up, as well as analyzing an existing application and finding
-            ways to improve it. I have a strong drive for excellence and I'm
+            can assess and organize complex ideas and build them from the ground
+            up, as well as analyze existing applications and find the best ways
+            to improve them. I have a strong drive for excellence and I'm
             heavily focused on user experience.
           </P>
           <P>
