@@ -248,7 +248,11 @@ export default function Layout({ pageTitle, children }) {
           </NavTitleLink>
         </NavTitle>
         {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
-        <MenuIcon onClick={toggleMenu}>
+        <MenuIcon
+          onClick={toggleMenu}
+          aria-label="Menu"
+          aria-expanded={menuOpen}
+        >
           <span tabIndex="-1">
             <span></span>
             <span></span>
