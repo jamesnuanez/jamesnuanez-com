@@ -58,12 +58,11 @@ export default function About() {
             heavily focused on user experience.
           </P>
           <P>
-            I'm currently a front end / full stack / Jamstack engineering
-            consultant. Before this I was a VoIP software developer, and before
-            that I was a software quality assurance specialist. I've also worked
-            as a designer and I've worked in customer support. All of these
-            experiences strongly influence my perspective on building
-            applications.
+            I'm currently working full time as a front end developer. I've also
+            worked as a full stack consultant, VoIP software developer, software
+            quality assurance specialist, designer, and I've even worked in
+            customer support. All of these experiences strongly influence my
+            perspective on building applications.
           </P>
           <P>
             I started in design, earning a bachelor of fine arts in illustration

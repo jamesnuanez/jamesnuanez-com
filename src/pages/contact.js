@@ -42,7 +42,7 @@ export default function Contact() {
         <TextContainer
           center
           narrow
-          title="Work status"
+          title="Say hello"
           links={[
             {
               wide: true,
@@ -84,8 +84,8 @@ export default function Contact() {
           ]}
         >
           <P>
-            I am currently accepting front end and full stack positions. I like
-            variety, so I'm open to both consulting and full time positions.
+            Drop me a line, look at some code, or send me an invite if you feel
+            so inclined. &nbsp; : )
           </P>
         </TextContainer>
       </Container>
