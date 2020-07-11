@@ -15,6 +15,7 @@ const shared = css`
   border-radius: 0.25rem;
   overflow: hidden;
   outline: 0;
+  transition: box-shadow 0.2s;
   box-shadow: ${({ theme }) => theme.shadowLarge};
   & > span {
     height: 2.75rem;
@@ -25,6 +26,7 @@ const shared = css`
     align-items: center;
     color: #fff;
     outline: 0;
+    transition: background 0.1s;
   }
   &:focus,
   &:hover {

@@ -79,6 +79,7 @@ const MenuIcon = styled.button`
       align-items: center;
       justify-content: center;
       outline: 0;
+      transition: box-shadow 0.1s;
     }
     & > span > span {
       background: rgba(255, 255, 255, 0.75);
@@ -129,6 +130,7 @@ const StyledNavLink = styled(Link)`
     align-items: center;
     font-size: 1.5rem;
     outline: 0;
+    transition: background 0.1s;
   }
   &:focus > span {
     box-shadow: inset 0 0.25rem ${({ theme }) => theme.dark},
