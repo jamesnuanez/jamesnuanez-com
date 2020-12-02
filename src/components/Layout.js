@@ -242,6 +242,12 @@ export default function Layout({ pageTitle, children }) {
           color="#383a4e"
         />
         <meta name="msapplication-TileColor" content="#383a4e" />
+        <script
+          async
+          defer
+          data-domain="jamesnuanez.com"
+          src="https://plausible.io/js/plausible.outbound-links.js"
+        ></script>
       </Helmet>
       <Nav>
         <NavTitle>
