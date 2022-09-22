@@ -36,6 +36,7 @@ const ImgContainer = styled.div`
   align-items: center;
   & > img {
     width: 100%;
+    height: auto;
     border-radius: 0.5rem;
     box-shadow: ${({ theme }) => theme.shadowLarge};
   }
@@ -65,7 +66,7 @@ const P = styled(OriginalP)`
 const Card = props => (
   <StyledCard>
     <ImgContainer>
-      <img src={props.imgSrc} alt={props.imgAlt} />
+      <img src={props.imgSrc} width="1600" height="900" alt={props.imgAlt} />
     </ImgContainer>
     <TextContainer>
       <P>{props.text}</P>

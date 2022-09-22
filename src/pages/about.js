@@ -18,6 +18,7 @@ const Content = styled.div`
 
 const Img = styled.img`
   width: 100%;
+  height: auto;
   display: block;
   margin-bottom: 2rem;
   border-radius: 1rem;
@@ -46,6 +47,8 @@ export default function About() {
       <Content>
         <Img
           src={aboutPhoto}
+          width="1161"
+          height="683"
           alt="Here's the keyboard I use, an ErgoDox with a custom keymap"
         />
         <TextContainer>
