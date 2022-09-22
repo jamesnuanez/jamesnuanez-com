@@ -23,6 +23,7 @@ const Img = styled.img`
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: ${({ theme }) => theme.shadowLarge};
+  background-color: #a3581d;
   @media (max-width: 1023px) {
     margin-bottom: 1rem;
   }
