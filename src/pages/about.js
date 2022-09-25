@@ -3,18 +3,10 @@ import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import OriginalP from "../components/elements/P"
+import PageContent from "../components/blocks/PageContent"
 import TextContainer from "../components/blocks/TextContainer"
 import PageEndLink from "../components/blocks/PageEndLink"
 import aboutPhoto from "../images/about-james-nuanez.jpg"
-
-const Content = styled.div`
-  max-width: 40rem;
-  padding: 4rem 0 10rem;
-  margin: auto;
-  @media (max-width: 1023px) {
-    padding-top: 2rem;
-  }
-`
 
 const Img = styled.img`
   width: 100%;
@@ -45,7 +37,7 @@ export default function About() {
           content="I build things for the web. I specialize in React, but I also have experience building APIs and full stack applications with Node.js. I love wrapping my head around a complex idea and building it from the ground up, as well as analyzing an existing application and finding ways to improve it. I have a strong drive for excellence and I'm heavily focused on user experience."
         />
       </Helmet>
-      <Content>
+      <PageContent>
         <Img
           src={aboutPhoto}
           width="1161"
@@ -86,7 +78,7 @@ export default function About() {
           </P>
         </TextContainer>
         <PageEndLink link="/process/" text="Learn more about my process" />
-      </Content>
+      </PageContent>
     </Layout>
   )
 }

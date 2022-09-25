@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
+import PageContent from "../components/blocks/PageContent"
 import PageEndLink from "../components/blocks/PageEndLink"
 import OriginalP from "../components/elements/P"
 import Link from "../components/elements/Link"
@@ -10,15 +11,6 @@ import workImgJambonz from "../images/work-example-jambonz.jpg"
 import workImgRealTimeTranscriptions from "../images/work-example-real-time-transcriptions.jpg"
 import workImgConferencingApplication from "../images/work-example-conferencing-application.jpg"
 import workImgJmmnuanez from "../images/work-example-jmmnuanez.jpg"
-
-const Content = styled.div`
-  max-width: 60rem;
-  padding: 6rem 0 10rem;
-  margin: auto;
-  @media (max-width: 1023px) {
-    padding-top: 2rem;
-  }
-`
 
 const StyledCard = styled.section`
   display: flex;
@@ -96,7 +88,7 @@ export default function Work() {
           content="Examples of websites and web applications that I have built."
         />
       </Helmet>
-      <Content>
+      <PageContent wide>
         <Card
           imgSrc={workImgTarPitStudios}
           imgAlt="Tar Pit Studios Jamstack website and store"
@@ -138,7 +130,7 @@ export default function Work() {
           linkText="Visit website"
         />
         <PageEndLink link="/about/" text="Learn more about me" />
-      </Content>
+      </PageContent>
     </Layout>
   )
 }

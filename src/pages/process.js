@@ -2,18 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
+import PageContent from "../components/blocks/PageContent"
 import TextContainer from "../components/blocks/TextContainer"
 import PageEndLink from "../components/blocks/PageEndLink"
 import P from "../components/elements/P"
-
-const Content = styled.div`
-  max-width: 40rem;
-  padding: 4rem 0 10rem;
-  margin: auto;
-  @media (max-width: 1023px) {
-    padding-top: 2rem;
-  }
-`
 
 export default function Process() {
   return (
@@ -25,7 +17,7 @@ export default function Process() {
           content="My general process, covering everything from planning to tooling."
         />
       </Helmet>
-      <Content>
+      <PageContent>
         <TextContainer title="Planning">
           <P>
             Probably the most critical portion of building an application, I use
@@ -92,7 +84,7 @@ export default function Process() {
         </TextContainer>
 
         <PageEndLink link="/contact/" text="Get in touch with me" />
-      </Content>
+      </PageContent>
     </Layout>
   )
 }

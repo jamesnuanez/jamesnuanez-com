@@ -2,21 +2,12 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
+import PageContent from "../components/blocks/PageContent"
 import TextContainer from "../components/blocks/TextContainer"
 import P from "../components/elements/P"
 import email from "../images/email.svg"
 import github from "../images/github.svg"
 import linkedin from "../images/linkedin.svg"
-
-const Container = styled.div`
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 700px) {
-    min-height: calc(100vh - 3.5rem);
-  }
-`
 
 export default function Contact() {
   const [isMobile, setIsMobile] = useState(null)
@@ -38,7 +29,7 @@ export default function Contact() {
           content="Let's work together! I am currently accepting front end and full stack positions. I like variety, so I'm open to both consulting and full time positions."
         />
       </Helmet>
-      <Container>
+      <PageContent>
         <TextContainer
           center
           narrow
@@ -90,7 +81,7 @@ export default function Contact() {
             so inclined. &nbsp; : )
           </P>
         </TextContainer>
-      </Container>
+      </PageContent>
     </Layout>
   )
 }
