@@ -175,7 +175,7 @@ const NavLink = props => (
 const Main = styled.main`
   padding: 0 2rem 0 13rem;
   @media (max-width: 700px) {
-    padding: 3.5rem 0.5rem 0;
+    padding: 3.5rem 1rem 0;
   }
 `
 
