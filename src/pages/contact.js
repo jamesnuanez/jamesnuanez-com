@@ -47,7 +47,7 @@ export default function Contact() {
             {
               wide: true,
               external: true,
-              dark: true,
+              white: true,
               href: "mailto:james@jamesnuanez.com",
               icon: email,
               text: isMobile
@@ -60,6 +60,7 @@ export default function Contact() {
             {
               wide: true,
               external: true,
+              white: true,
               href: "https://github.com/jamesnuanez",
               icon: github,
               text: isMobile
@@ -72,6 +73,7 @@ export default function Contact() {
             {
               wide: true,
               external: true,
+              white: true,
               href: "https://www.linkedin.com/in/jamesnuanez",
               icon: linkedin,
               text: isMobile

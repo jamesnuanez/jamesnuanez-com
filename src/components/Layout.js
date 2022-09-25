@@ -145,17 +145,13 @@ const StyledNavLink = styled(Link)`
   // ACTIVE NAV LINK
   //=====================
   &.active > span {
-    background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
+    background: rgba(${({ theme }) => theme.darkRgb}, 1);
     color: #fff;
   }
   &.active:focus > span {
     background: rgba(${({ theme }) => theme.darkRgb}, 0.8);
   }
   &.active:hover > span {
-    background: rgba(${({ theme }) => theme.darkRgb}, 1);
-    color: #fff;
-  }
-  &.active:focus:hover > span {
     background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
   }
 
@@ -184,15 +180,14 @@ const Main = styled.main`
 `
 
 const theme = {
-  dark: "#383a4e",
-  darkRgb: "56, 58, 78",
-  light: "#6d748d",
-  lightRgb: "109, 116, 141",
-  shadowSmall: "0 0.125rem 1rem rgba(56, 58, 78, 0.25)",
-  shadowMedium: "0 0.125rem 2rem rgba(56, 58, 78, 0.15)",
+  dark: "#564647",
+  darkRgb: "86, 70, 71",
+  light: "#f3f0ed",
+  shadowSmall: "0 0.125rem 1rem rgba(86, 70, 71, 0.25)",
+  shadowMedium: "0 0.125rem 2rem rgba(86, 70, 71, 0.15)",
   shadowLarge:
-    "0 0.5rem 0.5rem rgba(56, 58, 78, 0.1), 0 1rem 2rem rgba(56, 58, 78, 0.25)",
-  shadowNav: "0 0 1rem rgba(56, 58, 78, 0.1), 0 0 2rem rgba(56, 58, 78, 0.25)",
+    "0 0.5rem 0.5rem rgba(86, 70, 71, 0.1), 0 1rem 2rem rgba(86, 70, 71, 0.25)",
+  shadowNav: "0 0 1rem rgba(86, 70, 71, 0.1), 0 0 2rem rgba(86, 70, 71, 0.25)",
 }
 
 export default function Layout({ pageTitle, children }) {
@@ -213,7 +208,7 @@ export default function Layout({ pageTitle, children }) {
       <Helmet>
         <html lang="en" />
         <title>James Nuanez</title>
-        <meta name="theme-color" content="#383a4e" data-react-helmet="true" />
+        <meta name="theme-color" content="#564647" data-react-helmet="true" />
         <meta
           name="description"
           content="I build fast, responsive, and accessible websites and web applications, from design to deployment, that deliver exceptional user experience."
@@ -239,9 +234,9 @@ export default function Layout({ pageTitle, children }) {
         <link
           rel="mask-icon"
           href="/safari-pinned-tab.svg?v=20200604"
-          color="#383a4e"
+          color="#564647"
         />
-        <meta name="msapplication-TileColor" content="#383a4e" />
+        <meta name="msapplication-TileColor" content="#564647" />
         <script
           async
           defer

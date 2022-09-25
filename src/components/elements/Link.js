@@ -24,7 +24,6 @@ const shared = css`
     border-radius: 0.25rem;
     justify-content: ${({ icon }) => (icon ? `flex-start` : `center`)};
     align-items: center;
-    color: #fff;
     outline: 0;
     transition: background 0.1s;
   }
@@ -51,30 +50,30 @@ const InternalLink = ({ wide, left, ...props }) => (
 const StyledInternalLink = styled(InternalLink)`
   ${shared}
   & > span {
-    background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
+    color: #fff;
+    background: rgba(${({ theme }) => theme.darkRgb}, 1);
   }
   &:focus > span {
+    background: rgba(${({ theme }) => theme.darkRgb}, 0.8);
     box-shadow: inset 0 0 0 0.25rem ${({ theme }) => theme.dark};
   }
   &:hover > span {
-    background: rgba(${({ theme }) => theme.darkRgb}, 1);
+    background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
   }
 `
 const ExternalLink = styled.a`
   ${shared}
   display: block;
   & > span {
-    background: ${({ dark, theme }) =>
-      dark ? `rgba(${theme.darkRgb}, 0.9)` : theme.light};
+    color: ${({ theme }) => theme.dark};
+    background: ${({ white, theme }) => (white ? "#fff" : theme.light)};
+    border: 2px solid ${({ theme }) => theme.dark};
   }
   &:focus > span {
     box-shadow: inset 0 0 0 0.25rem ${({ theme }) => theme.dark};
   }
   &:hover > span {
-    ${({ dark, theme }) =>
-      dark &&
-      `background: rgba(${theme.darkRgb}, 1);
-    `}
+    background: rgba(255, 255, 255, 0.8);
   }
 `
 

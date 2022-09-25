@@ -26,6 +26,7 @@ export default function Home() {
             {
               wide: true,
               external: true,
+              white: true,
               href: "https://github.com/jamesnuanez",
               text: "View code on GitHub",
             },
