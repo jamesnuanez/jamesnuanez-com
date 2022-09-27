@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import PageContent from "../components/blocks/PageContent"
