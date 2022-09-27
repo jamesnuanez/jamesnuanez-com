@@ -77,6 +77,19 @@ const ExternalLink = styled.a`
   }
 `
 
+const TextMobile = styled.span`
+  display: none;
+  @media (${props => props.mobileBreakpoint}) {
+    display: inline;
+  }
+`
+
+const TextDesktop = styled.span`
+  @media (${props => props.mobileBreakpoint}) {
+    display: none;
+  }
+`
+
 export default function StyledLink(props) {
   return props.external ? (
     <ExternalLink
@@ -86,8 +99,17 @@ export default function StyledLink(props) {
     >
       <span tabIndex="-1">
         {props.icon && <img src={props.icon} alt="" />}
+        {props.textMobile && (
+          <TextMobile mobileBreakpoint={props.mobileBreakpoint}>
+            {props.textMobile}
+          </TextMobile>
+        )}
+        {props.textDesktop && (
+          <TextDesktop mobileBreakpoint={props.mobileBreakpoint}>
+            {props.textDesktop}
+          </TextDesktop>
+        )}
         {props.children}
-        {props.noScriptText && <noscript>{props.noScriptText}</noscript>}
       </span>
     </ExternalLink>
   ) : (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import PageContent from "../components/blocks/PageContent"
@@ -9,16 +9,7 @@ import github from "../images/github.svg"
 import linkedin from "../images/linkedin.svg"
 
 export default function Contact() {
-  const [isMobile, setIsMobile] = useState(null)
-  useEffect(() => {
-    const windowIsMobile = window.matchMedia("(max-width: 400px)")
-    setIsMobile(windowIsMobile.matches)
-    const setIfMobile = e => setIsMobile(e.matches)
-    windowIsMobile.addListener(setIfMobile)
-    return () => {
-      windowIsMobile.removeListener(setIfMobile)
-    }
-  }, [])
+  const mobileBreakpoint = "max-width: 374px"
   return (
     <Layout pageTitle="Contact">
       <Helmet>
@@ -40,12 +31,9 @@ export default function Contact() {
               white: true,
               href: "mailto:james@jamesnuanez.com",
               icon: email,
-              text: isMobile
-                ? "Email"
-                : isMobile === false
-                ? "james@jamesnuanez.com"
-                : "",
-              noScriptText: "Email",
+              textMobile: "Email",
+              textDesktop: "james@jamesnuanez.com",
+              mobileBreakpoint,
             },
             {
               wide: true,
@@ -53,12 +41,9 @@ export default function Contact() {
               white: true,
               href: "https://github.com/jamesnuanez",
               icon: github,
-              text: isMobile
-                ? "GitHub"
-                : isMobile === false
-                ? "github.com/jamesnuanez"
-                : "",
-              noScriptText: "GitHub",
+              textMobile: "GitHub",
+              textDesktop: "github.com/jamesnuanez",
+              mobileBreakpoint,
             },
             {
               wide: true,
@@ -66,12 +51,9 @@ export default function Contact() {
               white: true,
               href: "https://www.linkedin.com/in/jamesnuanez",
               icon: linkedin,
-              text: isMobile
-                ? "LinkedIn"
-                : isMobile === false
-                ? "linkedin.com/in/jamesnuanez"
-                : "",
-              noScriptText: "LinkedIn",
+              textMobile: "LinkedIn",
+              textDesktop: "linkedin.com/in/jamesnuanez",
+              mobileBreakpoint,
             },
           ]}
         >
