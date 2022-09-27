@@ -6,10 +6,7 @@ const shared = css`
   display: inline-block;
   text-decoration: none;
   margin-bottom: 1rem;
-  &:first-of-type {
-    margin-top: 1.25rem;
-  }
-  &:last-of-type {
+  &:last-child {
     margin-bottom: 0;
   }
   border-radius: 0.25rem;
