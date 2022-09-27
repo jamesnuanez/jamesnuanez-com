@@ -15,7 +15,7 @@ const Nav = styled.nav`
   text-align: right;
   background: #fff;
   box-shadow: ${({ theme }) => theme.shadowNav};
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     overflow: visible;
     background: ${({ theme }) => theme.dark};
     color: rgba(255, 255, 255, 0.75);
@@ -30,7 +30,7 @@ const NavTitle = styled.h1`
   margin: 2.5rem 1.25rem 1.5rem;
   font-size: 2rem;
   font-weight: normal;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     margin: 0;
     font-size: 1.5rem;
   }
@@ -41,7 +41,7 @@ const NavTitleLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.dark};
   outline: 0;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     height: 3.5rem;
     width: 3.5rem;
     display: flex;
@@ -53,7 +53,7 @@ const NavTitleLink = styled(Link)`
 
 const PageTitle = styled.h1`
   display: none;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     font-size: 1.5rem;
     font-weight: normal;
     margin: 0;
@@ -64,7 +64,7 @@ const PageTitle = styled.h1`
 
 const MenuIcon = styled.button`
   display: none;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     display: block;
     padding: 0;
     border: 0;
@@ -97,7 +97,7 @@ const MenuIcon = styled.button`
 const NavLinks = styled.div`
   display: flex;
   flex-direction: column;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     position: fixed;
     top: 3.5rem;
     right: 0;
@@ -111,7 +111,7 @@ const NavLinks = styled.div`
 `
 
 const Spacer = styled.div`
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     height: 5rem;
     flex-shrink: 0;
   }
@@ -159,7 +159,7 @@ const StyledNavLink = styled(Link)`
   //=====================
   // MOBILE
   //=====================
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     &:focus > span {
       box-shadow: inset 0 0.25rem ${({ theme }) => theme.dark},
         inset 0.25rem -0.25rem ${({ theme }) => theme.dark};
@@ -175,7 +175,7 @@ const NavLink = props => (
 
 const Main = styled.main`
   padding: 0 2rem 0 13rem;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     padding: 3.5rem 1rem 0;
   }
 `
@@ -189,6 +189,8 @@ const theme = {
   shadowLarge:
     "0 0.5rem 0.5rem rgba(86, 70, 71, 0.1), 0 1rem 2rem rgba(86, 70, 71, 0.25)",
   shadowNav: "0 0 1rem rgba(86, 70, 71, 0.1), 0 0 2rem rgba(86, 70, 71, 0.25)",
+  breakpointMobile: "max-width: 700px",
+  breakpointWorkPage: "max-width: 1023px",
 }
 
 export default function Layout({ pageTitle, children }) {

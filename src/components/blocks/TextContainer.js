@@ -9,7 +9,7 @@ const StyledTextContainer = styled.div`
   border-radius: 1rem;
   background: #fff;
   box-shadow: ${({ theme }) => theme.shadowLarge};
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     margin-bottom: 1.5rem;
     padding: 1.5rem;
   }
@@ -18,7 +18,7 @@ const StyledTextContainer = styled.div`
     `
     max-width: ${narrow ? `24rem` : `27.7rem`};
     margin: 5vh 0 10vh;
-    @media (max-width: 700px) {
+    @media (${({ theme }) => theme.breakpointMobile}) {
       margin: 2rem 0;
     }
   `}

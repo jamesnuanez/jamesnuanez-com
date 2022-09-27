@@ -5,7 +5,7 @@ import Link from "../elements/Link"
 const Centered = styled.div`
   margin-bottom: 6rem;
   text-align: center;
-  @media (max-width: 1023px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     margin-bottom: 4rem;
   }
 `

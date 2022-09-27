@@ -15,7 +15,7 @@ import workImgJmmnuanez from "../images/work-example-jmmnuanez.jpg"
 const StyledCard = styled.section`
   display: flex;
   margin-bottom: 6rem;
-  @media (max-width: 1023px) {
+  @media (${({ theme }) => theme.breakpointWorkPage}) {
     flex-wrap: wrap;
   }
 `
@@ -27,7 +27,7 @@ const ImgContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 1023px) {
+  @media (${({ theme }) => theme.breakpointWorkPage}) {
     width: 100%;
     margin-right: 0;
     margin-bottom: 1.5rem;
@@ -48,7 +48,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  @media (max-width: 1023px) {
+  @media (${({ theme }) => theme.breakpointWorkPage}) {
     width: 100%;
     align-items: center;
   }
