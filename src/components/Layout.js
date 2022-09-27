@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 import { Helmet } from "react-helmet"
 import "../global-styles.css"
+import OverscrollBackground from "../components/blocks/OverscrollBackground"
 
 const Nav = styled.nav`
   position: fixed;
@@ -272,6 +273,7 @@ export default function Layout({ pageTitle, children }) {
         </NavLinks>
       </Nav>
       <Main>{children}</Main>
+      <OverscrollBackground />
     </ThemeProvider>
   )
 }
