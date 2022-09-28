@@ -6,14 +6,14 @@ import TextContainer from "../components/blocks/TextContainer"
 import PageEndLink from "../components/blocks/PageEndLink"
 import P from "../components/elements/P"
 
-export default function Process() {
+export default function Stack() {
   return (
-    <Layout pageTitle="Process">
+    <Layout pageTitle="Stack">
       <Helmet>
-        <title>Process | James Nuanez</title>
+        <title>Stack | James Nuanez</title>
         <meta
           name="description"
-          content="My general process, covering everything from planning to tooling."
+          content="My stack, an overview of the tools I've worked with."
         />
       </Helmet>
       <PageContent>

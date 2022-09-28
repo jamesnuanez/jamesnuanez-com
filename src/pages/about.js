@@ -77,7 +77,7 @@ export default function About() {
             building until it stops falling over.
           </P>
         </TextContainer>
-        <PageEndLink link="/process/" text="Learn more about my process" />
+        <PageEndLink link="/stack/" text="Check out my stack" />
       </PageContent>
     </Layout>
   )

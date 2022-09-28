@@ -270,7 +270,7 @@ export default function Layout({ pageTitle, children }) {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/work/">Work</NavLink>
           <NavLink to="/about/">About</NavLink>
-          <NavLink to="/process/">Process</NavLink>
+          <NavLink to="/stack/">Stack</NavLink>
           <NavLink to="/contact/">Contact</NavLink>
           <Spacer />
         </NavLinks>
