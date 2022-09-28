@@ -190,6 +190,7 @@ const theme = {
     "0 0.5rem 0.5rem rgba(86, 70, 71, 0.1), 0 1rem 2rem rgba(86, 70, 71, 0.25)",
   shadowNav: "0 0 1rem rgba(86, 70, 71, 0.1), 0 0 2rem rgba(86, 70, 71, 0.25)",
   breakpointMobile: "max-width: 700px",
+  breakpointHomepage: "max-width: 915px",
   breakpointWorkPage: "max-width: 1023px",
 }
 

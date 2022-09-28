@@ -9,6 +9,13 @@ const PageContent = styled.div`
   min-height: 100vh;
   margin: auto;
   padding: 4rem 0;
+  ${({ theme, homepage }) =>
+    homepage &&
+    `
+    @media (${theme.breakpointHomepage}) {
+      max-width: 25rem;
+    }
+  `}
   @media (${({ theme }) => theme.breakpointMobile}) {
     min-height: calc(100vh - 3.5rem);
     padding: 1rem 0;
