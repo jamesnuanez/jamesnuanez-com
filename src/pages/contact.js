@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import PageContent from "../components/blocks/PageContent"
@@ -7,6 +8,10 @@ import P from "../components/elements/P"
 import email from "../images/email.svg"
 import github from "../images/github.svg"
 import linkedin from "../images/linkedin.svg"
+
+const ContactP = styled(P)`
+  margin-bottom: 1.5rem;
+`
 
 export default function Contact() {
   const mobileBreakpoint = "max-width: 374px"
@@ -21,14 +26,11 @@ export default function Contact() {
       </Helmet>
       <PageContent>
         <TextContainer
-          center
-          narrow
           title="Say hello"
           links={[
             {
               wide: true,
               external: true,
-              white: true,
               href: "mailto:james@jamesnuanez.com",
               icon: email,
               textMobile: "Email",
@@ -38,7 +40,6 @@ export default function Contact() {
             {
               wide: true,
               external: true,
-              white: true,
               href: "https://github.com/jamesnuanez",
               icon: github,
               textMobile: "GitHub",
@@ -48,7 +49,6 @@ export default function Contact() {
             {
               wide: true,
               external: true,
-              white: true,
               href: "https://www.linkedin.com/in/jamesnuanez",
               icon: linkedin,
               textMobile: "LinkedIn",
@@ -57,10 +57,10 @@ export default function Contact() {
             },
           ]}
         >
-          <P>
+          <ContactP>
             Drop me a line, look at some code, or send me an invite if you feel
             so inclined. &nbsp; : )
-          </P>
+          </ContactP>
         </TextContainer>
       </PageContent>
     </Layout>

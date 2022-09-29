@@ -2,13 +2,13 @@ import styled from "styled-components"
 
 const H1 = styled.h1`
   font-weight: normal;
+  line-height: 150%;
 
   ${({ theme, homepage, work }) =>
     homepage
       ? `
         margin: 0 0 0.2em;
         font-size: 47px;
-        line-height: 150%;
         @media (${theme.breakpointHomepage}) {
           font-size: 36px;
           font-size: clamp(24px, 8.5vw, 36px);

@@ -14,7 +14,6 @@ export default function ErrorPage() {
       </Helmet>
       <PageContent>
         <TextContainer
-          center
           title="404"
           links={[{ wide: true, to: "/", text: "Go home" }]}
         >

@@ -6,7 +6,8 @@ const Centered = styled.div`
   margin-bottom: 6rem;
   text-align: center;
   @media (${({ theme }) => theme.breakpointMobile}) {
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
   }
 `
 

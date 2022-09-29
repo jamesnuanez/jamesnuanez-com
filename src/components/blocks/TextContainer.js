@@ -13,15 +13,6 @@ const StyledTextContainer = styled.div`
     margin-bottom: 1rem;
     padding: 1.5rem;
   }
-  ${({ center, narrow }) =>
-    center &&
-    `
-    max-width: ${narrow ? `24rem` : `27.7rem`};
-    margin: 5vh 0 10vh;
-    @media (${({ theme }) => theme.breakpointMobile}) {
-      margin: 2rem 0;
-    }
-  `}
 `
 
 const LinkContainer = styled.div`

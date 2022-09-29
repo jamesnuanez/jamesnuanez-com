@@ -13,7 +13,6 @@ const shared = css`
   overflow: hidden;
   outline: 0;
   transition: box-shadow 0.2s;
-  box-shadow: ${({ theme }) => theme.shadowLarge};
   & > span {
     height: 2.75rem;
     padding: 0.5rem ${({ icon }) => (icon ? `1rem` : `1.25rem`)};
@@ -46,6 +45,7 @@ const InternalLink = ({ wide, left, ...props }) => (
 
 const StyledInternalLink = styled(InternalLink)`
   ${shared}
+  box-shadow: ${({ theme }) => theme.shadowLarge};
   & > span {
     color: #fff;
     background: rgba(${({ theme }) => theme.darkRgb}, 1);
@@ -61,9 +61,10 @@ const StyledInternalLink = styled(InternalLink)`
 const ExternalLink = styled.a`
   ${shared}
   display: block;
+  box-shadow: ${({ theme }) => `${theme.shadowSmall}`};
   & > span {
     color: ${({ theme }) => theme.dark};
-    background: ${({ white, theme }) => (white ? "#fff" : theme.light)};
+    background: #fff;
     border: 2px solid ${({ theme }) => theme.dark};
   }
   &:focus > span {
