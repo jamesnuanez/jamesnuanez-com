@@ -19,10 +19,7 @@ export default function Contact() {
     <Layout pageTitle="Contact">
       <Helmet>
         <title>Contact | James Nuanez</title>
-        <meta
-          name="description"
-          content="Let's connect."
-        />
+        <meta name="description" content="Let's connect." />
       </Helmet>
       <PageContent>
         <TextContainer
