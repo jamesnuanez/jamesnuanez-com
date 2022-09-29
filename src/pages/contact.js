@@ -21,12 +21,12 @@ export default function Contact() {
         <title>Contact | James Nuanez</title>
         <meta
           name="description"
-          content="Let's work together! I am currently accepting front end and full stack positions. I like variety, so I'm open to both consulting and full time positions."
+          content="Let's connect."
         />
       </Helmet>
       <PageContent>
         <TextContainer
-          title="Say hello"
+          title="Let's connect."
           links={[
             {
               wide: true,
@@ -57,10 +57,7 @@ export default function Contact() {
             },
           ]}
         >
-          <ContactP>
-            Drop me a line, look at some code, or send me an invite if you feel
-            so inclined. &nbsp; : )
-          </ContactP>
+          <ContactP>I'd love to hear from you!</ContactP>
         </TextContainer>
       </PageContent>
     </Layout>

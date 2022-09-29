@@ -215,7 +215,7 @@ export default function Layout({ pageTitle, children }) {
         <meta name="theme-color" content="#564647" data-react-helmet="true" />
         <meta
           name="description"
-          content="I build fast, responsive, and accessible websites and web applications, from design to deployment, that deliver exceptional user experience."
+          content="From design to deployment, I create fluid and intuitive applications that are fast, responsive, and accessible."
         />
         <link
           rel="apple-touch-icon"
