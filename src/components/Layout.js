@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 import { Helmet } from "react-helmet"
 import "../global-styles.css"
+import OverscrollBackground from "../components/blocks/OverscrollBackground"
 
 const Nav = styled.nav`
   position: fixed;
@@ -14,7 +15,7 @@ const Nav = styled.nav`
   text-align: right;
   background: #fff;
   box-shadow: ${({ theme }) => theme.shadowNav};
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     overflow: visible;
     background: ${({ theme }) => theme.dark};
     color: rgba(255, 255, 255, 0.75);
@@ -29,7 +30,7 @@ const NavTitle = styled.h1`
   margin: 2.5rem 1.25rem 1.5rem;
   font-size: 2rem;
   font-weight: normal;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     margin: 0;
     font-size: 1.5rem;
   }
@@ -40,7 +41,7 @@ const NavTitleLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.dark};
   outline: 0;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     height: 3.5rem;
     width: 3.5rem;
     display: flex;
@@ -52,7 +53,7 @@ const NavTitleLink = styled(Link)`
 
 const PageTitle = styled.h1`
   display: none;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     font-size: 1.5rem;
     font-weight: normal;
     margin: 0;
@@ -63,7 +64,7 @@ const PageTitle = styled.h1`
 
 const MenuIcon = styled.button`
   display: none;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     display: block;
     padding: 0;
     border: 0;
@@ -96,7 +97,7 @@ const MenuIcon = styled.button`
 const NavLinks = styled.div`
   display: flex;
   flex-direction: column;
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     position: fixed;
     top: 3.5rem;
     right: 0;
@@ -110,7 +111,7 @@ const NavLinks = styled.div`
 `
 
 const Spacer = styled.div`
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     height: 5rem;
     flex-shrink: 0;
   }
@@ -145,24 +146,20 @@ const StyledNavLink = styled(Link)`
   // ACTIVE NAV LINK
   //=====================
   &.active > span {
-    background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
+    background: rgba(${({ theme }) => theme.darkRgb}, 1);
     color: #fff;
   }
   &.active:focus > span {
     background: rgba(${({ theme }) => theme.darkRgb}, 0.8);
   }
   &.active:hover > span {
-    background: rgba(${({ theme }) => theme.darkRgb}, 1);
-    color: #fff;
-  }
-  &.active:focus:hover > span {
     background: rgba(${({ theme }) => theme.darkRgb}, 0.9);
   }
 
   //=====================
   // MOBILE
   //=====================
-  @media (max-width: 700px) {
+  @media (${({ theme }) => theme.breakpointMobile}) {
     &:focus > span {
       box-shadow: inset 0 0.25rem ${({ theme }) => theme.dark},
         inset 0.25rem -0.25rem ${({ theme }) => theme.dark};
@@ -178,21 +175,23 @@ const NavLink = props => (
 
 const Main = styled.main`
   padding: 0 2rem 0 13rem;
-  @media (max-width: 700px) {
-    padding: 3.5rem 0.5rem 0;
+  @media (${({ theme }) => theme.breakpointMobile}) {
+    padding: 3.5rem 1rem 0;
   }
 `
 
 const theme = {
-  dark: "#383a4e",
-  darkRgb: "56, 58, 78",
-  light: "#6d748d",
-  lightRgb: "109, 116, 141",
-  shadowSmall: "0 0.125rem 1rem rgba(56, 58, 78, 0.25)",
-  shadowMedium: "0 0.125rem 2rem rgba(56, 58, 78, 0.15)",
+  dark: "#564647",
+  darkRgb: "86, 70, 71",
+  light: "#f3f0ed",
+  shadowSmall: "0 0.125rem 1rem rgba(86, 70, 71, 0.25)",
+  shadowMedium: "0 0.125rem 2rem rgba(86, 70, 71, 0.15)",
   shadowLarge:
-    "0 0.5rem 0.5rem rgba(56, 58, 78, 0.1), 0 1rem 2rem rgba(56, 58, 78, 0.25)",
-  shadowNav: "0 0 1rem rgba(56, 58, 78, 0.1), 0 0 2rem rgba(56, 58, 78, 0.25)",
+    "0 0.5rem 0.5rem rgba(86, 70, 71, 0.1), 0 1rem 2rem rgba(86, 70, 71, 0.25)",
+  shadowNav: "0 0 1rem rgba(86, 70, 71, 0.1), 0 0 2rem rgba(86, 70, 71, 0.25)",
+  breakpointMobile: "max-width: 700px",
+  breakpointHomepage: "max-width: 915px",
+  breakpointWorkPage: "max-width: 1400px",
 }
 
 export default function Layout({ pageTitle, children }) {
@@ -213,10 +212,10 @@ export default function Layout({ pageTitle, children }) {
       <Helmet>
         <html lang="en" />
         <title>James Nuanez</title>
-        <meta name="theme-color" content="#383a4e" data-react-helmet="true" />
+        <meta name="theme-color" content="#564647" data-react-helmet="true" />
         <meta
           name="description"
-          content="I build fast, responsive, and accessible websites and web applications, from design to deployment, that deliver exceptional user experience."
+          content="From design to deployment, I create fluid and intuitive applications that are fast, responsive, and accessible."
         />
         <link
           rel="apple-touch-icon"
@@ -239,9 +238,9 @@ export default function Layout({ pageTitle, children }) {
         <link
           rel="mask-icon"
           href="/safari-pinned-tab.svg?v=20200604"
-          color="#383a4e"
+          color="#564647"
         />
-        <meta name="msapplication-TileColor" content="#383a4e" />
+        <meta name="msapplication-TileColor" content="#564647" />
         <script
           async
           defer
@@ -271,12 +270,13 @@ export default function Layout({ pageTitle, children }) {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/work/">Work</NavLink>
           <NavLink to="/about/">About</NavLink>
-          <NavLink to="/process/">Process</NavLink>
+          <NavLink to="/stack/">Stack</NavLink>
           <NavLink to="/contact/">Contact</NavLink>
           <Spacer />
         </NavLinks>
       </Nav>
       <Main>{children}</Main>
+      <OverscrollBackground />
     </ThemeProvider>
   )
 }

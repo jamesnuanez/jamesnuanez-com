@@ -3,10 +3,11 @@ import styled from "styled-components"
 import Link from "../elements/Link"
 
 const Centered = styled.div`
-  margin-top: 4rem;
+  margin-bottom: 6rem;
   text-align: center;
-  @media (max-width: 1023px) {
-    margin-top: 2rem;
+  @media (${({ theme }) => theme.breakpointMobile}) {
+    margin-top: 1rem;
+    margin-bottom: 8rem;
   }
 `
 
