@@ -3,7 +3,7 @@ import styled from "styled-components"
 const H1 = styled.h1`
   font-weight: normal;
 
-  ${({ theme, homepage }) =>
+  ${({ theme, homepage, work }) =>
     homepage
       ? `
         margin: 0 0 0.2em;
@@ -17,7 +17,7 @@ const H1 = styled.h1`
       `
       : `
         margin: 0 0 1rem;
-        font-size: 2.5rem;
+        font-size: ${work ? "2rem" : "2.5rem"};
         @media (${theme.breakpointMobile}) {
           font-size: 1.75rem;
         }

@@ -72,6 +72,12 @@ const ExternalLink = styled.a`
   &:hover > span {
     background: rgba(255, 255, 255, 0.8);
   }
+  ${({ work, theme }) =>
+    work &&
+    `@media (${theme.breakpointWorkPage}) {
+      align-self: center;
+    }
+  `}
 `
 
 const TextMobile = styled.span`

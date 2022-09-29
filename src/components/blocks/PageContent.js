@@ -5,10 +5,17 @@ const PageContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: ${props => (props.wide ? "60" : "40.625")}rem;
+  max-width: ${props => (props.wide ? "80" : "40.625")}rem;
   min-height: 100vh;
   margin: auto;
   padding: 4rem 0;
+  ${({ theme, wide }) =>
+    wide &&
+    `
+    @media (${theme.breakpointWorkPage}) {
+      max-width: 40.625rem;
+    }
+  `}
   ${({ theme, homepage }) =>
     homepage &&
     `
