@@ -2,7 +2,7 @@
   "name": "jamesnuanez-com",
   "description": "The website of James Nuanez.",
   "author": "James Nuanez <james@jamesnuanez.com> (http://www.jamesnuanez.com)",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "license": "MIT",
   "private": true,
   "scripts": {
