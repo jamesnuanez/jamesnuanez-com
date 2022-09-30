@@ -78,9 +78,9 @@ export default function About() {
             improving code quality, with an emphasis on simplicity and
             readability, as well as improving local development environments,
             implementing ephemeral environments, and stabilizing deployments,
-            because this is what it takes to write software that can maintaining
-            a high level of excellence while continually growing and changing
-            over time.
+            because this is what it takes to write software that can maintain a
+            high level of excellence while continually growing and changing over
+            time.
           </P>
         </TextContainer>
         <PageEndLink link="/stack/" text="Check out my stack" />
