@@ -6,8 +6,9 @@ I build software for the internet.
 
 From design to deployment, I create fluid and intuitive user interfaces that
 are fast, responsive, and accessible, and when I'm not making things from
-scratch, I clean up codebases, relentlessly removing the cruft and finding ways
-to make the code easier to understand, safer to deploy, and more performant.
+scratch, I bring maintainability and stability to established codebases,
+relentlessly removing the cruft, eliminating elusive bugs, and improving code
+quality.
 
 This is my website. It was built using GatsbyJS.
 
