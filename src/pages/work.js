@@ -112,7 +112,7 @@ export default function Work() {
           imgbackgroundColor="#f3f3f3"
           title="CPaaS Front End"
           text="Built with Create React App using React Hooks and styled-components, this user interface provides an effortless provisioning and configuration experience, including some fun front-end features like table sorting and bulk editing."
-          url="https://github.com/jambonz/jambonz-webapp"
+          url="https://github.com/jambonz/jambonz-webapp/tree/e3d384158f5319e13b6d653693f62be2ce46284b"
           linkText="View code on GitHub"
         />
         <Card
@@ -130,7 +130,7 @@ export default function Work() {
           imgbackgroundColor="#fff"
           title="Full Stack Conferencing"
           text="Built with Create React App, styled-components, Node.js, MySQL, OpenAPI / Swagger, and Tape for testing, this application manages conferencing bridges and call transcriptions for a connected VoIP application."
-          url="https://github.com/davehorton/cautious-enigma"
+          url="https://github.com/davehorton/cautious-enigma/tree/38c0257b4383be6cdaad10ea2316b192cb6cfaf1"
           linkText="View code on GitHub"
         />
         <Card
@@ -139,7 +139,7 @@ export default function Work() {
           imgbackgroundColor="#eff3f6"
           title="Real-Time Transcriptions"
           text="Front end to display real-time call transcriptions via WebSockets, built with Create React App and Ant Design."
-          url="https://github.com/davehorton/voicebot-readout"
+          url="https://github.com/davehorton/voicebot-readout/tree/a4f75943a73eea071ff32416b02c84eb9a3feb2b"
           linkText="View code on GitHub"
         />
         <PageEndLink link="/about/" text="Learn more about me" />
