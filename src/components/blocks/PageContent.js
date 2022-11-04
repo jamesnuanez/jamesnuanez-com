@@ -5,7 +5,7 @@ const PageContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: ${props => (props.wide ? "80" : "40.625")}rem;
+  max-width: ${props => (props.wide ? "80" : "41.5")}rem;
   min-height: 100vh;
   margin: auto;
   padding: 4rem 0;
@@ -20,7 +20,7 @@ const PageContent = styled.div`
     homepage &&
     `
     @media (${theme.breakpointHomepage}) {
-      max-width: 25rem;
+      max-width: 30rem;
     }
   `}
   @media (${({ theme }) => theme.breakpointMobile}) {
