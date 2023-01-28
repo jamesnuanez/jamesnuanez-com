@@ -103,7 +103,7 @@ export default function Work() {
           imgbackgroundColor="#fedb75"
           title="Jamstack with Next.js"
           text="Built with Next.js to combine the fluidity of React with the speed of static site generation and the flexibility of API routes, this application connects to Braintree and Printful for serverless payment processing and product management. Deployed to Vercel."
-          url="https://www.tarpitstudios.com"
+          url="https://www.shapecarver.com"
           linkText="Visit website"
         />
         <Card
